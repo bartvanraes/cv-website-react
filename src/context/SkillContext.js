@@ -1,19 +1,26 @@
-import React, { createContext, useState } from 'react'
-import skillData from './../data/skillData'
+import React, { createContext, useReducer } from 'react'
+import skillData from 'data/skillData'
+import {skillReducer} from './reducers/skillReducer'
 
 const SkillContext = createContext()
 
 const SkillProvider = ({ children }) => {
-    const [skills, setSkills] = useState(
-        skillData
+    const [skills, dispatch] = useReducer(
+        skillReducer,
+        {
+            skills: skillData,
+            filter: {},
+            displayedSkills: []
+        }
+        
     )
 
-    const saveSkill = skill => {
+    /*const saveSkill = skill => {
         // not used
-    }
+    }*/
 
     return (
-        <SkillContext.Provider value={{skills, saveSkill}}>
+        <SkillContext.Provider value={{skills, dispatch}}>
             {children}
         </SkillContext.Provider>
     )

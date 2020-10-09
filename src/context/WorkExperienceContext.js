@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import workExperienceData from '../data/workExperienceData'
+import workExperienceData from 'data/workExperienceData'
 
 const WorkExperienceContext = createContext()
 

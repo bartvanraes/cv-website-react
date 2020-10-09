@@ -1,11 +1,17 @@
 import React from 'react'
 
+function showSkills(skills) {
+    return skills.map((skill) => <li key={skill.name}>{skill.name}</li>)
+}
+
 function OverviewContainer(props) {
     return (
         <div>
-            TEST
-            <h1>{props.workExperiences[0].company}</h1>
-            <h2>{props.skills[1].name}</h2>
+            <form onSubmit={props.handleSubmit}>
+                <h1>{props.workExperiences.length > 0 ? props.workExperiences[0].company : 'no experience'}</h1>
+                <ul>{showSkills(props.skills.displayedSkills)}</ul>
+                <button>Filter</button>
+            </form>
         </div>
     )
 }
