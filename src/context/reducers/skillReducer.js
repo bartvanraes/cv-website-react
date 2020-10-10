@@ -72,13 +72,13 @@ export const skillReducer = (state, action) => {
                         }
                     })
                 ],
-                displayedSoftwareSkills: {
+                displayedSoftwareSkills: [
                     ...displayedSkills.filter((skill, index) => {
                         if (skill.category === CategoryType.SOFTWARE) {
                             return skill
                         }
                     })
-                }
+                ]
             }
         break
     }

@@ -10,12 +10,38 @@ import TextField from '@material-ui/core/TextField'
 import InputLabel from '@material-ui/core/InputLabel'
 import NativeSelect from '@material-ui/core/NativeSelect'
 import FormHelperText from '@material-ui/core/FormHelperText'
-import { withStyles, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import CategoryType from 'enums/CategoryType'
 
-function showSkills(skills) {
-    return skills.map((skill) => <Grid item xs={3} key={skill.name}><SkillItem key={skill.name} item={skill}></SkillItem></Grid>)
+function showSkills(skills, categoryType) {
+    let title = ''
+    switch (categoryType) {
+        case CategoryType.PROGRAMMING_SKILL:
+            title = 'Programming Skills'
+            break
+        case CategoryType.METHODOLOGY:
+            title = 'Methodology'
+            break
+        case CategoryType.SOFTWARE:
+            title = 'Software'
+            break
+    }
+    const titleElement = <Grid item xs={12} key={title}>
+            <h2>{title}</h2>                    
+    </Grid>
+
+    if (skills.length === 0)  {
+        return
+    }
+
+    let returnVal = []
+    let returnSkills = skills.map((skill) => <Grid item xs={3} key={skill.name}><SkillItem key={skill.name} item={skill}></SkillItem></Grid>)
+
+    returnVal.push(titleElement)
+    returnVal.push(returnSkills)
+
+    return returnVal
 }
 
 const useStyles = makeStyles(theme => ({
@@ -82,8 +108,13 @@ function SkillOverviewContainer(props) {
                             </FormControl>
                         </FormGroup>
                     </Paper>    
-                </Grid>           
-                {showSkills(props.skills.displayedSkills)}            
+                </Grid>
+                
+                {showSkills(props.skills.displayedProgrammingSkills, CategoryType.PROGRAMMING_SKILL)} 
+                
+                {showSkills(props.skills.displayedMethodologySkills, CategoryType.METHODOLOGY)} 
+                
+                {showSkills(props.skills.displayedSoftwareSkills, CategoryType.SOFTWARE)}            
             </Grid>
         </div>        
     )

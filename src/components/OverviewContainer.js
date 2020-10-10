@@ -7,6 +7,8 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import TabPanel from './TabPanel'
 import SkillOverview from './skills/SkillOverviewComponent'
+import WorkExperienceOverview from './workExperiences/WorkExperienceOverviewComponent'
+
 
 function showSkills(skills) {
     return skills.map((skill) => <li key={skill.name}>{skill.name}</li>)
@@ -28,6 +30,7 @@ function OverviewContainer(props) {
                         <TabPanel value={props.tab.selectedTab} index={0}>
                         </TabPanel>
                         <TabPanel value={props.tab.selectedTab} index={1}>
+                            <WorkExperienceOverview></WorkExperienceOverview>
                         </TabPanel>
                         <TabPanel value={props.tab.selectedTab} index={2}>
                             <SkillOverview></SkillOverview>

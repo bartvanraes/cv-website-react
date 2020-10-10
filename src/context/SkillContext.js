@@ -16,7 +16,10 @@ const SkillProvider = ({ children }) => {
                 category: '',
                 handsonOnly: true
             },
-            displayedSkills: []
+            displayedSkills: [],
+            displayedProgrammingSkills: [],
+            displayedMethodologySkills: [],
+            displayedSoftwareSkills: []
         }
         
     )
