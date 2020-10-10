@@ -3,12 +3,15 @@ import {WorkExperienceProvider} from './context/WorkExperienceContext'
 import {SkillProvider} from './context/SkillContext'
 import Overview from './components/OverviewComponent'
 import './App.css';
+import { TabProvider } from 'context/TabContext';
 
 function App() {
   return (
     <WorkExperienceProvider>
       <SkillProvider>
-        <Overview></Overview>
+        <TabProvider>
+          <Overview></Overview>
+        </TabProvider>
       </SkillProvider>
     </WorkExperienceProvider>
   );

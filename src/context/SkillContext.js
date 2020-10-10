@@ -9,7 +9,13 @@ const SkillProvider = ({ children }) => {
         skillReducer,
         {
             skills: skillData,
-            filter: {},
+            filter: {
+                name: '',
+                professionalOnly: false,
+                legacyOnly: null,
+                category: '',
+                handsonOnly: true
+            },
             displayedSkills: []
         }
         
