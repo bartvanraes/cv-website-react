@@ -6,11 +6,12 @@ import Typography from '@material-ui/core/Typography'
 
 
 function WorkExperienceItemContainer(props) {
+    console.log(props)
     return (
         <Card>
             <CardContent>
                 <Typography>
-                    {props.item.employer}
+                    {props.item.company}
                 </Typography>                
             </CardContent>
         </Card>

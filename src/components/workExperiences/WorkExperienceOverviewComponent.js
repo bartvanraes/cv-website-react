@@ -7,6 +7,7 @@ import './WorkExperienceOverviewComponent.css'
 const WorkExperienceOverview = () => {
     const {workExperiences, dispatch} = useContext(WorkExperienceContext)
 
+    console.log('WorkExperienceOverview')
     console.log(workExperiences)
     useEffect(() => {
         dispatch({ type: WorkExperienceDispatchType.FILTER,  

@@ -3,9 +3,9 @@ import WorkExperienceDispatchType from 'enums/WorkExperienceDispatchType'
 export const workExperienceReducer = (state, action) => {
     console.log('workExperienceReducer')
     console.log(action.type)
-    console.log(WorkExperienceDispatchType.Filter)
+
     switch (action.type) {
-        case WorkExperienceDispatchType.Filter: 
+        case WorkExperienceDispatchType.FILTER: 
             console.log(state)
             const prevFilter = state.filter
             
@@ -22,7 +22,7 @@ export const workExperienceReducer = (state, action) => {
 
                     if (filter.search && filter.search !== '') {
                         const search = filter.search.toLowerCase()
-                        if (!work.employer.toLowerCase().includes(search)) {
+                        if (!work.company.toLowerCase().includes(search)) {
                             returnWork = null
                         }
                     }
@@ -45,6 +45,7 @@ export const workExperienceReducer = (state, action) => {
                 })
             ]
 
+            console.log('displayedWorkExperiences')
             console.log(displayedWorkExperiences)
 
             return {
