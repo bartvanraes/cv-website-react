@@ -1,16 +1,24 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useReducer } from 'react'
+import workExperienceData from 'data/workExperienceData'
+import skillData from 'data/skillData'
+import {infoOverviewReducer} from './reducers/infoOverviewReducer'
 
 const InfoOverviewContext = createContext()
 
 const InfoOverviewProvider = ({ children }) => {
-    const [infoOverview, setInfoOverview] = useState(
+    const [infoOverview, dispatch] = useReducer(
+        infoOverviewReducer,
         {
-            showMoreSkills: false
+            showMoreSkills: false,
+            workExperiences: workExperienceData,
+            skills: skillData,
+            selectedGeneralSkill: '',
+            relevantWorkExperiences: []
         }
     )
 
     return (
-        <InfoOverviewContext.Provider value={{infoOverview, setInfoOverview}}>
+        <InfoOverviewContext.Provider value={{infoOverview, dispatch}}>
             {children}
         </InfoOverviewContext.Provider>
     )

@@ -5,6 +5,7 @@ import EmailIcon from '@material-ui/icons/Email'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import MyLocationIcon from '@material-ui/icons/MyLocation'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
+import RelevantWorkExperienceOverview from './workExperiences/RelevantWorkExperienceOverviewComponent'
 
 const useStyles = makeStyles(theme => ({
     iconStyle: {
@@ -17,16 +18,25 @@ const useStyles = makeStyles(theme => ({
         marginLeft: theme.spacing(2),
         marginTop: theme.spacing(3)
     },
-    skillStyle: {
+    skillBoxStyle: {
         marginLeft: theme.spacing(2),
+        marginTop: theme.spacing(2)
+    },
+    skillStyle: {
+        background: '#FFFFFF',
+        '&:hover': {
+            background: '#c7cbd1'
+        },
+        marginBottom: theme.spacing(1),
+        cursor: 'pointer'
     },
     showMoreStyle: {
-        marginLeft: theme.spacing(1),
-        marginTop: theme.spacing(1)
+        marginLeft: theme.spacing(1)
     }
 }))
 
-const showSkill = (name, rating) => {
+
+const showSkill = (name, rating, classes) => {
     let dots = []
     for (let i = 1; i <= 5; i++) {
         if (i <= rating) {
@@ -38,11 +48,11 @@ const showSkill = (name, rating) => {
     }
     
     return (
-        <Grid container spacing={3} key={name}>
-            <Grid item xs={6}>
+        <Grid container spacing={3} key={name} className={classes.skillStyle}>
+            <Grid item xs={7}>
             {name}
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={5}>
             {dots}
             </Grid>
         </Grid>
@@ -52,7 +62,7 @@ const showSkill = (name, rating) => {
 function InfoOverviewContainer(props) {
     console.log('InfoOverviewContainer')
     console.log(props)
-    const classes = useStyles()
+    const classes = useStyles()    
     return (
         <div>
             <Grid container spacing={3}>
@@ -71,6 +81,40 @@ function InfoOverviewContainer(props) {
                         Always aiming for the highest
                         quality
                     </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography color="textSecondary" variant="h4">
+                        RECENT EXPERIENCE
+                    </Typography>
+                    <RelevantWorkExperienceOverview></RelevantWorkExperienceOverview>
+                </Grid>
+                
+                <Grid item xs={4}>
+                    <Typography color="textSecondary" variant="h4">
+                        SKILLS
+                    </Typography>
+                    <Box className={classes.skillBoxStyle}>
+                        {showSkill('.NET (C#)', 4, classes)}
+                        {showSkill('HTML CSS', 4, classes)}
+                        {showSkill('Angular', 3, classes)}
+                        {showSkill('Vue', 3, classes)}
+                        {showSkill('SQL Server', 4, classes)}
+                        {showSkill('Javascript', 4, classes)}
+                        
+                        
+                        <Box hidden={!props.infoOverview.showMoreSkills}>
+                            {showSkill('Amazon AWS', 2, classes)}
+                            {showSkill('Node.js', 2, classes)}
+                            {showSkill('React', 1, classes)}
+                            {showSkill('Java', 1, classes)}
+                            {showSkill('Python', 1, classes)}
+                            {showSkill('UML Design', 2, classes)}
+                        </Box>                        
+                    </Box>
+                    <Button onClick={props.toggleSkills} className={classes.showMoreStyle}>{ props.infoOverview.showMoreSkills ? 'Show Less' : 'Show More'}</Button>
+                    
+                    
+                    
                 </Grid>
                 <Grid item xs={6}>
                     
@@ -118,33 +162,6 @@ function InfoOverviewContainer(props) {
                 </Grid>
                 <Grid item xs={6}>
 
-                </Grid>
-                <Grid item xs={6}>
-                    <Typography color="textSecondary" variant="h4">
-                        SKILLS
-                    </Typography>
-                    <Box className={classes.skillStyle}>
-                        {showSkill('.NET (C#)', 4)}
-                        {showSkill('HTML CSS', 4)}
-                        {showSkill('Angular', 3)}
-                        {showSkill('Vue', 3)}
-                        {showSkill('SQL Server', 4)}
-                        {showSkill('Amazon AWS', 2)}
-                        
-                        <Box hidden={!props.infoOverview.showMoreSkills}>
-                            {showSkill('Node.js', 2)}
-                            {showSkill('React', 1)}
-                            {showSkill('Java', 1)}
-                            {showSkill('Python', 1)}
-                        </Box>                        
-                    </Box>
-                    <Button onClick={props.toggleSkills} className={classes.showMoreStyle}>{ props.infoOverview.showMoreSkills ? 'Show Less' : 'Show More'}</Button>
-                    
-                    
-                    
-                </Grid>
-                <Grid item xs={6}>
-                    
                 </Grid>
             </Grid>
 
