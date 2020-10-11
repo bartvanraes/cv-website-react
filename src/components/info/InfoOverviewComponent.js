@@ -24,6 +24,14 @@ const InfoOverview = () => {
         })*/
     }
 
+    const handleGeneralSkillSelect = (e, skill) => {
+        console.log('handleGeneralSkillSelect')
+        console.log(skill)
+        dispatch({ type: InfoOverviewDispatchType.GENERAL_SKILL_SELECTED,  
+            selectedGeneralSkill: skill
+        })
+    }
+
     useEffect(() => {
         dispatch({ type: InfoOverviewDispatchType.GENERAL_SKILL_SELECTED,  
             selectedGeneralSkill: ''
@@ -32,7 +40,8 @@ const InfoOverview = () => {
 
     return InfoOverviewContainer({
         infoOverview,
-        toggleSkills
+        toggleSkills,
+        handleGeneralSkillSelect
     })
 }
 

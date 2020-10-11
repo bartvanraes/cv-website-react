@@ -32,6 +32,13 @@ const skillData = [
         category: CategoryType.PROGRAMMING_SKILL
     },
     {
+        name: 'Ngrx',
+        months: 9.5,
+        professional: true,
+        legacy: false,
+        category: CategoryType.PROGRAMMING_SKILL
+    },
+    {
         name: 'AngularJS',
         months: 5.5,
         professional: true,
@@ -621,7 +628,7 @@ const skillData = [
         category: CategoryType.PROGRAMMING_SKILL
     },
     {
-        name: 'Tenserflow 2.0',
+        name: 'Tensorflow 2.0',
         months: 0,
         professional: false,
         legacy: false,

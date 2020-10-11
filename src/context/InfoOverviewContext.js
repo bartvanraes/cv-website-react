@@ -13,7 +13,9 @@ const InfoOverviewProvider = ({ children }) => {
             workExperiences: workExperienceData,
             skills: skillData,
             selectedGeneralSkill: '',
-            relevantWorkExperiences: []
+            relevantWorkExperiences: [],
+            relevantSkills: [],
+            expandedWorkExperience: ''
         }
     )
 

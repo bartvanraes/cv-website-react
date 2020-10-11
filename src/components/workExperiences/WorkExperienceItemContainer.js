@@ -11,7 +11,6 @@ import formatCompanyName from 'helpers/formatCompanyName'
 
 
 const showTechnologies = techList => {
-    //return techList.map((tech) => `${tech}, `)
     return techList.join(', ')
 }
 

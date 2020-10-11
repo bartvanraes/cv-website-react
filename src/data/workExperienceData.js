@@ -14,7 +14,7 @@ const workExerperienceData = [
         • Hosting docker containers in Amazon AWS`,
         projects: `• Setting up the communication between our ordering system and multiple 3d printing supplier APIs so our orders could get printed automatically.
         • Development of a material service so we could link our internal materials to 3d printing materials and finishes from suppliers.`,
-        skills: ['Angular', 'NestJS', 'NodeJS', 'MongoDB', 'Docker', 'Amazon AWS', 'TypeScript', 'Ngrx', 'Jest', 'UML Design']
+        skills: ['Angular', 'NestJS (node.js)', 'NodeJS', 'MongoDB', 'Docker', 'Amazon AWS', 'TypeScript', 'Ngrx', 'Jest', 'UML Design']
     },
     {
         company: 'Geo-IT',
