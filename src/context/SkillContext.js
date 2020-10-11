@@ -10,11 +10,12 @@ const SkillProvider = ({ children }) => {
         {
             skills: skillData,
             filter: {
-                name: '',
+                search: '',
                 professionalOnly: false,
                 legacyOnly: null,
                 category: '',
-                handsonOnly: true
+                handsonOnly: true,
+                confirmTextSearch: false
             },
             displayedSkills: [],
             displayedProgrammingSkills: [],

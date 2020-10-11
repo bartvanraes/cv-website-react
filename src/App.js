@@ -4,13 +4,16 @@ import {SkillProvider} from './context/SkillContext'
 import Overview from './components/OverviewComponent'
 import './App.css';
 import { TabProvider } from 'context/TabContext';
+import { InfoOverviewProvider } from 'context/InfoOverviewContext';
 
 function App() {
   return (
     <WorkExperienceProvider>
       <SkillProvider>
         <TabProvider>
-          <Overview></Overview>
+          <InfoOverviewProvider>
+            <Overview></Overview>
+          </InfoOverviewProvider>
         </TabProvider>
       </SkillProvider>
     </WorkExperienceProvider>

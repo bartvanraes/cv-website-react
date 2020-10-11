@@ -49,7 +49,6 @@ const formatDate = (dateStr) => {
             break
     }
 
-    console.log(month)
     return `${monthName} ${year}`
 }
 

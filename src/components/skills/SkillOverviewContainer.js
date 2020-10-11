@@ -49,6 +49,9 @@ const useStyles = makeStyles(theme => ({
         marginBottom: 20,
         marginLeft: 20,
         marginRight: 20
+    },
+    resetStyle: {
+        marginLeft: 20
     }
 }))
 
@@ -63,9 +66,10 @@ function SkillOverviewContainer(props) {
                             <FormControl className={classes.filterStyle}>
                                 <TextField 
                                     label="Filter by name" 
-                                    value={props.skills.filter.name}
+                                    value={props.skills.filter.search}
+                                    onKeyDown={props.confirmTextSearch}
                                     onChange={props.changeFilter}
-                                    name="name"
+                                    name="search"
                                 />
                             </FormControl>
                             
@@ -90,7 +94,7 @@ function SkillOverviewContainer(props) {
                                 label="Hands-on experience"
                             />
                             <FormControl>
-                            <InputLabel htmlFor="category-native-helper">Category</InputLabel>
+                                <InputLabel htmlFor="category-native-helper">Category</InputLabel>
                                 <NativeSelect
                                     value={props.skills.filter.category}
                                     onChange={props.changeFilter}
@@ -106,6 +110,7 @@ function SkillOverviewContainer(props) {
                                 </NativeSelect>
                                 <FormHelperText>Select skill category</FormHelperText>
                             </FormControl>
+                            <Button color="secondary" className={classes.resetStyle} onClick={props.resetFilter}>Reset</Button>     
                         </FormGroup>
                     </Paper>    
                 </Grid>

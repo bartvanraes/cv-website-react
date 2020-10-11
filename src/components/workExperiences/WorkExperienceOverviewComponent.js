@@ -19,18 +19,49 @@ const WorkExperienceOverview = () => {
     }, [])
 
     const changeFilter = (event, value) => {
+        console.log('changeFilter')
         const name = event.currentTarget.name
+        console.log(name)
+        let val = !!event.currentTarget.value ? event.currentTarget.value : value 
+        console.log(val)
+        val = val === undefined ? '': val
         dispatch({
             type: WorkExperienceDispatchType.FILTER,  
             filter: {
-                [name]: value
+                [name]: val
+            }
+        })
+    }
+
+    const confirmTextSearch = (e) => {
+        if (e.keyCode === 13) {
+            dispatch({
+                type: WorkExperienceDispatchType.FILTER,  
+                filter: {
+                    'confirmTextSearch': true
+                }
+            })
+        }
+    }
+
+    const resetFilter = () => {
+        dispatch({
+            type: WorkExperienceDispatchType.FILTER,  
+            filter: {
+                search: '',
+                temporaryOnly: false,
+                consultancyOnly: false,
+                quitOnly: false,
+                confirmTextSearch: false
             }
         })
     }
 
     return WorkExperienceOverviewContainer({
         workExperiences,
-        changeFilter
+        changeFilter,
+        confirmTextSearch,
+        resetFilter
     })
 }
 

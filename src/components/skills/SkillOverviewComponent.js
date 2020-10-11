@@ -12,7 +12,7 @@ const SkillOverview = () => {
 
     useEffect(() => {
         dispatch({ type: SkillDispatchType.FILTER,  
-            skill: {
+            filter: {
                 professionalOnly: false,
                 handsonOnly: false
             }
@@ -26,20 +26,50 @@ const SkillOverview = () => {
         console.log(event.currentTarget.name)
         console.log(event.currentTarget.value)
 
-        const val = !!event.currentTarget.value ? event.currentTarget.value : value 
+        let val = !!event.currentTarget.value ? event.currentTarget.value : value 
         console.log(val)
+        val = val === undefined ? '': val
         const name = event.currentTarget.name
         dispatch({
             type: SkillDispatchType.FILTER,  
-            skill: {
+            filter: {
                 [name]: val
+            }
+        })
+    }
+
+    const confirmTextSearch = (e) => {
+        console.log('confirmTextSearch')
+        console.log(e.keyCode)
+        if (e.keyCode === 13) {
+            dispatch({
+                type: SkillDispatchType.FILTER,  
+                filter: {
+                    'confirmTextSearch': true
+                }
+            })
+        }
+    }
+
+    const resetFilter = () => {
+        dispatch({
+            type: SkillDispatchType.FILTER,  
+            filter: {
+                search: '',
+                professionalOnly: false,
+                legacyOnly: null,
+                category: '',
+                handsonOnly: false,
+                confirmTextSearch: false
             }
         })
     }
 
     return SkillOverviewContainer({
         skills,
-        changeFilter
+        changeFilter,
+        confirmTextSearch,
+        resetFilter
     })
 }
 

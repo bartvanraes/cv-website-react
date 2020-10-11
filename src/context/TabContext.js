@@ -5,7 +5,7 @@ const TabContext = createContext()
 const TabProvider = ({ children }) => {
     const [tab, setSelectedTab] = useState(
         {
-            selectedTab: 1
+            selectedTab: 0
         }
     )
 

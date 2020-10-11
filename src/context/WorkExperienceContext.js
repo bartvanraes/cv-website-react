@@ -12,7 +12,9 @@ const WorkExperienceProvider = ({ children }) => {
             filter: {
                 search: '',
                 temporaryOnly: false,
-                consultancyOnly: false
+                consultancyOnly: false,
+                quitOnly: false,
+                confirmTextSearch: false
             },
             displayedWorkExperiences: []
         }

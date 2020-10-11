@@ -9,16 +9,28 @@ export const skillReducer = (state, action) => {
             const prevFilter = state.filter
             const filter = {
                 ...prevFilter,
-                ...action.skill
+                ...action.filter
             }
 
             console.log(filter)
+            console.log(prevFilter.search)
+            console.log(filter.search)
+            console.log(filter.confirmTextSearch)
 
+            // if only the text search changed but nothing is commited then only change the filter, not the displayed items
+            if (prevFilter.search !== filter.search && !filter.confirmTextSearch) {
+                console.log('ended filtering')
+                return {
+                    ...state,
+                    filter: filter
+                }
+            }
+            
             const displayedSkills = [
                 ...state.skills.filter((skill, index) => {
                     let returnSkill = skill
-                    if (filter.name && filter.name !== '') {
-                        const name = filter.name.toLowerCase().replace('.', '')
+                    if (filter.search && filter.search !== '') {
+                        const name = filter.search.toLowerCase().replace('.', '')
                         if (!skill.name.toLowerCase().replace('.', '').includes(name)) {
                             returnSkill = null
                         }
@@ -53,6 +65,13 @@ export const skillReducer = (state, action) => {
                     }
                 })
             ]
+
+            if (filter.confirmTextSearch) { // reset the search filter trigger
+                filter.confirmTextSearch = false
+                filter.search = ''
+                console.log('filter reset')
+                console.log(filter)
+            }
 
             return {
                 ...state,

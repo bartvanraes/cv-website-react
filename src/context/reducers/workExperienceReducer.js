@@ -3,10 +3,9 @@ import WorkExperienceDispatchType from 'enums/WorkExperienceDispatchType'
 export const workExperienceReducer = (state, action) => {
     console.log('workExperienceReducer')
     console.log(action.type)
-
+    
     switch (action.type) {
         case WorkExperienceDispatchType.FILTER: 
-            console.log(state)
             const prevFilter = state.filter
             
             const filter = {
@@ -16,13 +15,24 @@ export const workExperienceReducer = (state, action) => {
 
             console.log(filter)
 
+            // if only the text search changed but nothing is commited then only change the filter, not the displayed items
+            if (prevFilter.search !== filter.search && !filter.confirmTextSearch) {
+                return {
+                    ...state,
+                    filter: filter
+                }
+            }
+            
             const displayedWorkExperiences = [
                 ...state.workExperiences.filter((work, index) => {
                     let returnWork = work
 
                     if (filter.search && filter.search !== '') {
-                        const search = filter.search.toLowerCase()
-                        if (!work.company.toLowerCase().includes(search)) {
+                        const search = filter.search.toLowerCase().trim()
+                        if (!work.company.toLowerCase().includes(search) 
+                            && !work.outline.toLowerCase().includes(search)
+                            && !work.responsabilities.toLowerCase().includes(search)
+                            && !work.projects.toLowerCase().includes(search)) {
                             returnWork = null
                         }
                     }
@@ -39,6 +49,12 @@ export const workExperienceReducer = (state, action) => {
                         }
                     }
 
+                    if (returnWork !== null && filter.quitOnly !== undefined && filter.quitOnly !== null) {
+                        if (filter.quitOnly && work.quit !== filter.quitOnly) {
+                            returnWork = null
+                        }
+                    }
+
                     if (returnWork !== null) {
                         return returnWork
                     }
@@ -47,6 +63,12 @@ export const workExperienceReducer = (state, action) => {
 
             console.log('displayedWorkExperiences')
             console.log(displayedWorkExperiences)
+            console.log(filter)
+
+            if (filter.confirmTextSearch) { // reset the search filter trigger
+                filter.confirmTextSearch = false
+                filter.search = ''
+            }
 
             return {
                 ...state,

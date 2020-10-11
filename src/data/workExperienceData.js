@@ -7,6 +7,7 @@ const workExerperienceData = [
         endDate: '27/01/2020',
         temporary: false,
         consultancy: false,
+        quit: false,
         outline: 'Full stack development in Angular, NestJs (nodejs) and Typescript for multiple projects related to 3D printing.',
         responsabilities: `• Development and maintenance of multiple projects in Angular and NestJS        
         • Analyzing new functionalities
@@ -23,6 +24,7 @@ const workExerperienceData = [
         endDate: '30/04/2019',
         temporary: false,
         consultancy: false,
+        quit: true,
         outline: 'Front end development in Vue of a new component of the map software of Geo-IT',
         responsabilities: `• Development of multiple projects in Vue and .NET Core
         • Selecting Vue components for the new application
@@ -58,6 +60,7 @@ const workExerperienceData = [
         endDate: '31/12/2016',
         temporary: true,
         consultancy: false,
+        quit: false,
         outline: `Development according to the scrum guidelines of Puls, a licensing and versioning platform to support Nobel Biocare's dental solutions.
         I was also in charge of setting up a new project in Angular 2`,
         responsabilities: `• Implementing new functionality in an ASP.NET MVC project
@@ -74,6 +77,7 @@ const workExerperienceData = [
         endDate: '30/06/2015',
         temporary: true,
         consultancy: true,
+        quit: false,
         outline: `Development of projects for multiple clients in .NET via Accent Jobs
         Some of the clients were Kenze, BPM Software, iCUE Consulting and Farmad`,
         responsabilities: `• Development in different technological environments such as ASP.NET MVC 5, AngularJS and Winforms
@@ -92,7 +96,8 @@ const workExerperienceData = [
         startDate: '01/01/2013',
         endDate: '01/09/2014',
         temporary: false,
-        consultancy: true,
+        consultancy: false,
+        quit: false,
         outline: `Development in team of a fare and customer module in WPF and .NET 4.0 as part of the Mobiguider project for Prodata and De Lijn.`,
         responsabilities: `• Development in .NET and WPF
         • Writing unit-, acceptation- and UI tests in nUnit, Specflow and Gherkin
@@ -108,13 +113,14 @@ const workExerperienceData = [
         endDate: '01/08/2012',
         temporary: false,
         consultancy: true,
+        quit: false,
         consultancyCompany: '3D-ICT',
         outline: `Development of ULNV application for Acerta as a consultant`,
         responsabilities: `• Development of ULNV application according to the scrum methodology in team of 6 developers and 2 testers.
         • New functionality is developed in C# (.NET 3.5) based on User Stories created by the analists
         • Writing Unit tests in MS Test, bugfixing and managing test data for the test team.`,
         projects: 'ULNV',
-        skills: ['.NET', 'Javascript', 'SQL Server', 'jQuery']
+        skills: ['.NET', 'ASP.NET', 'Javascript', 'SQL Server', 'jQuery']
     },
     {
         company: 'Brainsolutions',
@@ -124,6 +130,7 @@ const workExerperienceData = [
         endDate: '01/07/2011',
         temporary: false,
         consultancy: true,
+        quit: false,
         outline: `Development of multiple projects in .NET and Kentico CMS`,
         responsabilities: `• Development and maintenance of .NET projects.
         • Creating technical analysis for new projects.
@@ -131,6 +138,107 @@ const workExerperienceData = [
         projects: `• RentInParis
         • A project for 'De Orde van Franstalige Advocaten'`,
         skills: ['.NET', 'ASP.NET MVC', 'nHibernate', 'LINQ', 'jQuery', 'Visual Studio', 'SQL Server', 'Kentico CMS', 'Redgate SQL Compare', 'nUnit']
+    },
+    {
+        company: 'NVSM',
+        location: 'Brussels',
+        position: '.NET Consultant',
+        startDate: '01/05/2008',
+        endDate: '30/11/2009',
+        temporary: false,
+        consultancy: true,
+        quit: false,
+        consultancyCompany: 'VDS Computing',
+        outline: `.NET consultant for NVSM in Brussels via VDS Computing`,
+        responsabilities: `• Developed different modules of SocioCultureel, a smart client application that allowed users to manage events, subscriptions to those events and payments.
+        • Created prototypes to support the analyst.
+        • Wrote technical documentation about the developed modules.
+        • Bugfixing`,
+        projects: `SocioCultureel`,
+        skills: ['.NET', 'Winforms', 'Visual Studio']
+    },
+    {
+        company: 'Marketing Map',
+        location: 'Antwerp',
+        position: '.NET Developer',
+        startDate: '01/12/2006',
+        endDate: '30/04/2008',
+        temporary: false,
+        consultancy: false,
+        quit: true,
+        outline: `.NET development on multiple smaller projects`,
+        responsabilities: `Developed and maintained multiple .NET-projects that usually are focused around geographic data`,
+        projects: `• a webservice to geocode addresses
+        • a webservice to request NIS data from specific regions in Belgium
+        • a project for De Post to find the best locations to open new stores.`,
+        skills: ['.NET', 'ASP.NET', 'SQL Server']
+    },
+    {
+        company: 'Vintage Productions',
+        location: 'Antwerp',
+        position: '.NET Developer',
+        startDate: '01/09/2006',
+        endDate: '30/11/2006',
+        temporary: false,
+        consultancy: false,
+        quit: false,
+        outline: `Development and maintenance of multiple projects`,
+        responsabilities: `.NET Development and maintenance of multiple smaller projects`,
+        projects: `• Close The Gap
+        • Project for Honda`,
+        skills: ['.NET', 'ASP.NET', 'Winforms', 'nHibernate']
+    },
+    {
+        company: 'De Post',
+        location: 'Brussels',
+        position: 'Stress Tester',
+        startDate: '01/02/2006',
+        endDate: '30/06/2006',
+        temporary: false,
+        consultancy: true,
+        quit: false,
+        consultancyCompany: 'Alti',
+        outline: `Stress testing with Mercury LoadRunner`,
+        responsabilities: `• Performed stress Testing in Mercury LoadRunner for a renumeration application.
+        • Bugfixing in VBScript
+        • C# Development (rarely)`,
+        projects: 'Remus',
+        skills: ['Mercury Loadrunner', 'VBScript']
+    },
+    {
+        company: 'Business Architects International',
+        location: 'Mechelen',
+        position: 'UML Designer',
+        startDate: '01/02/2005',
+        endDate: '31/10/2005',
+        temporary: false,
+        consultancy: true,
+        quit: false,
+        consultancyCompany: 'Brainbridge',
+        outline: `UML Designer on a project for Rabobank`,
+        responsabilities: `• UML Designer: designed a loan & insurance application for Rabobank in Rational Rose (UML).
+        Cap Gemini was going to do the actual implementation based on our models.
+        • Release Manager: I had the responsability of the last 3 releases.`,
+        projects: `Rabobank`,
+        skills: ['UML Design', 'Rational Rose', 'SourceSafe']
+    },
+    {
+        company: 'Ferranti Computer Systems',
+        location: 'Antwerp',
+        position: 'Oracle Developer',
+        startDate: '01/03/2003',
+        endDate: '30/06/2004',
+        temporary: true,
+        consultancy: false,
+        quit: false,
+        outline: `Development in team of MECOMS, an application to support the liberalised energy market in Zeeland (NL).`,
+        responsabilities: `• Import meter configuration changes on electricity and gas connections.
+        • Technical Analysis
+        • Data Migration
+        • Creating reports in Oracle Reports
+        • Testing`,
+        projects: 'MECOMS',
+        skills: ['Oracle', 'TOAD', 'PL/SQL']
     }
 ]
 
