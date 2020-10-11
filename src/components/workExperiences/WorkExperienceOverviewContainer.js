@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 const showWorkExperiences = (workExperiences) => {
     console.log('showWorkExperiences')
     console.log(workExperiences)
-    return workExperiences.map((work) => <Grid item xs={3} key={work.startDate}><WorkExperienceItem key={work.startDate} item={work}></WorkExperienceItem></Grid>)
+    return workExperiences.map((work) => <Grid item xs={12} key={work.startDate}><WorkExperienceItem key={work.startDate} item={work}></WorkExperienceItem></Grid>)
 }
 
 function WorkExperienceOverviewContainer(props) {

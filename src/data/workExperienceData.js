@@ -4,32 +4,32 @@ const workExerperienceData = [
         location: 'Antwerp',
         position: 'Angular/Nest.js Developer',
         startDate: '01/04/2019',
-        endDate: '01/01/2020',
+        endDate: '27/01/2020',
         temporary: false,
         consultancy: false,
         outline: 'Full stack development in Angular, NestJs (nodejs) and Typescript for multiple projects related to 3D printing.',
-        responsabilities: `Development and maintenance of multiple projects in Angular and NestJS
-        Analyzing new functionalities
-        Hosting docker containers in Amazon AWS`,
-        projects: `Setting up the communication between our ordering system and multiple 3d printing supplier APIs so our orders could get printed automatically.
-        Development of a material service so we could link our internal materials to 3d printing materials and finishes from suppliers.`,
-        skills: ['Angular', 'NestJS', 'NodeJS', 'MongoDB', 'Docker', 'Amazon AWS', 'TypeScript', 'Ngrx', 'Jest']
+        responsabilities: `• Development and maintenance of multiple projects in Angular and NestJS        
+        • Analyzing new functionalities
+        • Hosting docker containers in Amazon AWS`,
+        projects: `• Setting up the communication between our ordering system and multiple 3d printing supplier APIs so our orders could get printed automatically.
+        • Development of a material service so we could link our internal materials to 3d printing materials and finishes from suppliers.`,
+        skills: ['Angular', 'NestJS', 'NodeJS', 'MongoDB', 'Docker', 'Amazon AWS', 'TypeScript', 'Ngrx', 'Jest', 'UML Design']
     },
     {
         company: 'Geo-IT',
         location: 'Antwerp',
         position: 'Vue/.NET Developer',
         startDate: '01/03/2018',
-        endDate: '01/04/2019',
+        endDate: '30/04/2019',
         temporary: false,
         consultancy: false,
         outline: 'Front end development in Vue of a new component of the map software of Geo-IT',
-        responsabilities: `Development of multiple projects in Vue and .NET Core
-        Selecting Vue components for the new application
-        Setting up the security (both authentication and authorization) of the applications with Identity Server 4`,
-        projects: `Creating a working prototype to present to the clients
-        Setup of new projects in Vue and .NET Core
-        Security with Identity Server`,
+        responsabilities: `• Development of multiple projects in Vue and .NET Core
+        • Selecting Vue components for the new application
+        • Setting up the security (both authentication and authorization) of the applications with Identity Server 4`,
+        projects: `• Creating a working prototype to present to the clients
+        • Setup of new projects in Vue and .NET Core
+        • Security with Identity Server`,
         skills: ['Vue', 'Vuex', '.NET Core', 'Identity Server', 'OpenLayers', 'Vuetify', 'MapGuide', 'PostgreSQL', 'Dapper', 'Entity Framework']
     },
     {
@@ -37,18 +37,100 @@ const workExerperienceData = [
         location: 'Antwerp',
         position: 'Python Developer',
         startDate: '01/11/2017',
-        endDate: '01/02/2018',
+        endDate: '28/02/2018',
         temporary: true,
         consultancy: false,
         outline: `Front- and backend development at a state-of-the-art datascience project about predicting the quality and financial forecast of a movie based on its script.`,
-        responsabilities: `Preparing the migration from AngularJS to Angular
-        Implementing new functionalities on the frontend 
-        Creating and extending rich D3.js diagrams
-        Backend development in Python`,
-        projects: `Refactoring of the annotation system which is used to analyse movie scripts
-        Development of numerous pages and their backend logic such as a page to position the movie script on a graph between other movies based on the predicted chance that it will receive an award.
-        The app is used by top tier movie productions companies in Hollywood`,
+        responsabilities: `• Preparing the migration from AngularJS to Angular
+        • Implementing new functionalities on the frontend 
+        • Creating and extending rich D3.js diagrams
+        • Backend development in Python`,
+        projects: `• Refactoring of the annotation system which is used to analyse movie scripts
+        • Development of numerous pages and their backend logic such as a page to position the movie script on a graph between other movies based on the predicted chance that it will receive an award.
+        • The app is used by top tier movie productions companies in Hollywood`,
         skills: ['Python', 'Angular', 'D3.js', 'SQLAlchemy', 'MySQL']
+    },
+    {
+        company: 'Nobel Biocare',
+        location: 'Mechelen',
+        position: '.NET Developer',
+        startDate: '01/03/2016',
+        endDate: '31/12/2016',
+        temporary: true,
+        consultancy: false,
+        outline: `Development according to the scrum guidelines of Puls, a licensing and versioning platform to support Nobel Biocare's dental solutions.
+        I was also in charge of setting up a new project in Angular 2`,
+        responsabilities: `• Implementing new functionality in an ASP.NET MVC project
+        • Writing unit- and integration tests
+        • Bugfixing`,
+        projects: `• Setting up a new project in Angular 2`,
+        skills: ['.NET', 'Angular', 'ASP.NET MVC', 'WPF', 'jQuery', 'nHibernate']
+    },
+    {
+        company: 'Multiple interim projects via Accent Jobs',
+        location: '',
+        position: '.NET Developer',
+        startDate: '01/09/2014',
+        endDate: '30/06/2015',
+        temporary: true,
+        consultancy: true,
+        outline: `Development of projects for multiple clients in .NET via Accent Jobs
+        Some of the clients were Kenze, BPM Software, iCUE Consulting and Farmad`,
+        responsabilities: `• Development in different technological environments such as ASP.NET MVC 5, AngularJS and Winforms
+        • Development of a working prototype
+        • Refactoring of existing webpages with performance issues
+        • Bugfixing`,
+        projects: `• Farmad: Development of a prototype of their new application for the Farma 2014 expo
+        • Kenze: Front end development in ASP.NET MVC for a project about parking spots
+        • BPM Software: Development in AngularJS of a room rental application`,
+        skills: ['.NET', 'AngularJS', 'ASP.NET MVC', 'WPF', 'jQuery', 'Entity Framework', 'Kendo-ui', 'Rest API', 'DevExpress Controls', 'DevExpress XPO', 'Firebird']
+    },
+    {
+        company: 'Experteam',
+        location: 'Antwerpen',
+        position: '.NET Developer',
+        startDate: '01/01/2013',
+        endDate: '01/09/2014',
+        temporary: false,
+        consultancy: true,
+        outline: `Development in team of a fare and customer module in WPF and .NET 4.0 as part of the Mobiguider project for Prodata and De Lijn.`,
+        responsabilities: `• Development in .NET and WPF
+        • Writing unit-, acceptation- and UI tests in nUnit, Specflow and Gherkin
+        • Creating technical analysis documentation`,
+        projects: 'Mobiguider, a big project for Prodata and De Lijn',
+        skills: ['.NET', 'WPF', 'nUnit', 'Oracle', 'SQL Server', 'UML Design', 'SpecFlow', 'Gherkin']
+    },
+    {
+        company: 'Acerta',
+        location: 'Wilrijk',
+        position: '.NET Consultant',
+        startDate: '01/11/2011',
+        endDate: '01/08/2012',
+        temporary: false,
+        consultancy: true,
+        consultancyCompany: '3D-ICT',
+        outline: `Development of ULNV application for Acerta as a consultant`,
+        responsabilities: `• Development of ULNV application according to the scrum methodology in team of 6 developers and 2 testers.
+        • New functionality is developed in C# (.NET 3.5) based on User Stories created by the analists
+        • Writing Unit tests in MS Test, bugfixing and managing test data for the test team.`,
+        projects: 'ULNV',
+        skills: ['.NET', 'Javascript', 'SQL Server', 'jQuery']
+    },
+    {
+        company: 'Brainsolutions',
+        location: 'Edegem',
+        position: '.NET Developer',
+        startDate: '01/02/2010',
+        endDate: '01/07/2011',
+        temporary: false,
+        consultancy: true,
+        outline: `Development of multiple projects in .NET and Kentico CMS`,
+        responsabilities: `• Development and maintenance of .NET projects.
+        • Creating technical analysis for new projects.
+        • Creating new websites with Kentico CMS`,
+        projects: `• RentInParis
+        • A project for 'De Orde van Franstalige Advocaten'`,
+        skills: ['.NET', 'ASP.NET MVC', 'nHibernate', 'LINQ', 'jQuery', 'Visual Studio', 'SQL Server', 'Kentico CMS', 'Redgate SQL Compare', 'nUnit']
     }
 ]
 
