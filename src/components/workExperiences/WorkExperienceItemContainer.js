@@ -53,10 +53,10 @@ function WorkExperienceItemContainer(props) {
                 </Typography> 
                 <br />
                 <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
-                    Key Responsabilities
+                    Key responsibilities
                 </Typography>
                 <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
-                    {props.item.responsabilities}
+                    {props.item.responsibilities}
                 </Typography>
                 <br />
                 <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>

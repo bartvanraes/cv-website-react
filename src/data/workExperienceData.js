@@ -9,7 +9,7 @@ const workExerperienceData = [
         consultancy: false,
         quit: false,
         outline: 'Full stack development in Angular, NestJs (nodejs) and Typescript for multiple projects related to 3D printing.',
-        responsabilities: `• Development and maintenance of multiple projects in Angular and NestJS        
+        responsibilities: `• Development and maintenance of multiple projects in Angular and NestJS        
         • Analyzing new functionalities
         • Hosting docker containers in Amazon AWS`,
         projects: `• Setting up the communication between our ordering system and multiple 3d printing supplier APIs so our orders could get printed automatically.
@@ -26,7 +26,7 @@ const workExerperienceData = [
         consultancy: false,
         quit: true,
         outline: 'Front end development in Vue of a new component of the map software of Geo-IT',
-        responsabilities: `• Development of multiple projects in Vue and .NET Core
+        responsibilities: `• Development of multiple projects in Vue and .NET Core
         • Selecting Vue components for the new application
         • Setting up the security (both authentication and authorization) of the applications with Identity Server 4`,
         projects: `• Creating a working prototype to present to the clients
@@ -43,7 +43,7 @@ const workExerperienceData = [
         temporary: true,
         consultancy: false,
         outline: `Front- and backend development at a state-of-the-art datascience project about predicting the quality and financial forecast of a movie based on its script.`,
-        responsabilities: `• Preparing the migration from AngularJS to Angular
+        responsibilities: `• Preparing the migration from AngularJS to Angular
         • Implementing new functionalities on the frontend 
         • Creating and extending rich D3.js diagrams
         • Backend development in Python`,
@@ -63,7 +63,7 @@ const workExerperienceData = [
         quit: false,
         outline: `Development according to the scrum guidelines of Puls, a licensing and versioning platform to support Nobel Biocare's dental solutions.
         I was also in charge of setting up a new project in Angular 2`,
-        responsabilities: `• Implementing new functionality in an ASP.NET MVC project
+        responsibilities: `• Implementing new functionality in an ASP.NET MVC project
         • Writing unit- and integration tests
         • Bugfixing`,
         projects: `• Setting up a new project in Angular 2`,
@@ -80,7 +80,7 @@ const workExerperienceData = [
         quit: false,
         outline: `Development of projects for multiple clients in .NET via Accent Jobs
         Some of the clients were Kenze, BPM Software, iCUE Consulting and Farmad`,
-        responsabilities: `• Development in different technological environments such as ASP.NET MVC 5, AngularJS and Winforms
+        responsibilities: `• Development in different technological environments such as ASP.NET MVC 5, AngularJS and Winforms
         • Development of a working prototype
         • Refactoring of existing webpages with performance issues
         • Bugfixing`,
@@ -99,7 +99,7 @@ const workExerperienceData = [
         consultancy: false,
         quit: false,
         outline: `Development in team of a fare and customer module in WPF and .NET 4.0 as part of the Mobiguider project for Prodata and De Lijn.`,
-        responsabilities: `• Development in .NET and WPF
+        responsibilities: `• Development in .NET and WPF
         • Writing unit-, acceptation- and UI tests in nUnit, Specflow and Gherkin
         • Creating technical analysis documentation`,
         projects: 'Mobiguider, a big project for Prodata and De Lijn',
@@ -116,7 +116,7 @@ const workExerperienceData = [
         quit: false,
         consultancyCompany: '3D-ICT',
         outline: `Development of ULNV application for Acerta as a consultant`,
-        responsabilities: `• Development of ULNV application according to the scrum methodology in team of 6 developers and 2 testers.
+        responsibilities: `• Development of ULNV application according to the scrum methodology in team of 6 developers and 2 testers.
         • New functionality is developed in C# (.NET 3.5) based on User Stories created by the analists
         • Writing Unit tests in MS Test, bugfixing and managing test data for the test team.`,
         projects: 'ULNV',
@@ -132,7 +132,7 @@ const workExerperienceData = [
         consultancy: true,
         quit: false,
         outline: `Development of multiple projects in .NET and Kentico CMS`,
-        responsabilities: `• Development and maintenance of .NET projects.
+        responsibilities: `• Development and maintenance of .NET projects.
         • Creating technical analysis for new projects.
         • Creating new websites with Kentico CMS`,
         projects: `• RentInParis
@@ -150,7 +150,7 @@ const workExerperienceData = [
         quit: false,
         consultancyCompany: 'VDS Computing',
         outline: `.NET consultant for NVSM in Brussels via VDS Computing`,
-        responsabilities: `• Developed different modules of SocioCultureel, a smart client application that allowed users to manage events, subscriptions to those events and payments.
+        responsibilities: `• Developed different modules of SocioCultureel, a smart client application that allowed users to manage events, subscriptions to those events and payments.
         • Created prototypes to support the analyst.
         • Wrote technical documentation about the developed modules.
         • Bugfixing`,
@@ -167,7 +167,7 @@ const workExerperienceData = [
         consultancy: false,
         quit: true,
         outline: `.NET development on multiple smaller projects`,
-        responsabilities: `Developed and maintained multiple .NET-projects that usually are focused around geographic data`,
+        responsibilities: `Developed and maintained multiple .NET-projects that usually are focused around geographic data`,
         projects: `• a webservice to geocode addresses
         • a webservice to request NIS data from specific regions in Belgium
         • a project for De Post to find the best locations to open new stores.`,
@@ -183,7 +183,7 @@ const workExerperienceData = [
         consultancy: false,
         quit: false,
         outline: `Development and maintenance of multiple projects`,
-        responsabilities: `.NET Development and maintenance of multiple smaller projects`,
+        responsibilities: `.NET Development and maintenance of multiple smaller projects`,
         projects: `• Close The Gap
         • Project for Honda`,
         skills: ['.NET', 'ASP.NET', 'Winforms', 'nHibernate']
@@ -199,7 +199,7 @@ const workExerperienceData = [
         quit: false,
         consultancyCompany: 'Alti',
         outline: `Stress testing with Mercury LoadRunner`,
-        responsabilities: `• Performed stress Testing in Mercury LoadRunner for a renumeration application.
+        responsibilities: `• Performed stress Testing in Mercury LoadRunner for a renumeration application.
         • Bugfixing in VBScript
         • C# Development (rarely)`,
         projects: 'Remus',
@@ -216,7 +216,7 @@ const workExerperienceData = [
         quit: false,
         consultancyCompany: 'Brainbridge',
         outline: `UML Designer on a project for Rabobank`,
-        responsabilities: `• UML Designer: designed a loan & insurance application for Rabobank in Rational Rose (UML).
+        responsibilities: `• UML Designer: designed a loan & insurance application for Rabobank in Rational Rose (UML).
         Cap Gemini was going to do the actual implementation based on our models.
         • Release Manager: I had the responsability of the last 3 releases.`,
         projects: `Rabobank`,
@@ -232,7 +232,7 @@ const workExerperienceData = [
         consultancy: false,
         quit: false,
         outline: `Development in team of MECOMS, an application to support the liberalised energy market in Zeeland (NL).`,
-        responsabilities: `• Import meter configuration changes on electricity and gas connections.
+        responsibilities: `• Import meter configuration changes on electricity and gas connections.
         • Technical Analysis
         • Data Migration
         • Creating reports in Oracle Reports

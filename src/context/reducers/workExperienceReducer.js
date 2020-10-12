@@ -27,7 +27,7 @@ export const workExperienceReducer = (state, action) => {
                         const search = filter.search.toLowerCase().trim()
                         if (!work.company.toLowerCase().includes(search) 
                             && !work.outline.toLowerCase().includes(search)
-                            && !work.responsabilities.toLowerCase().includes(search)
+                            && !work.responsibilities.toLowerCase().includes(search)
                             && !work.projects.toLowerCase().includes(search)) {
                             returnWork = null
                         }
