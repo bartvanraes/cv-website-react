@@ -80,6 +80,21 @@ const showSkill = (props, name, rating, classes) => {
     )
 }
 
+const showRelevantExperiences = (props, classes) => {
+    if (props.infoOverview.relevantWorkExperiences.length === 0) {
+        return
+    }
+
+    return (
+        <Box>
+            <Typography color="textSecondary" variant="h4" className={classes.experienceTitleStyle}>
+                {props.infoOverview.selectedGeneralSkill === '' ? 'RECENT EXPERIENCE' : 'RELEVANT EXPERIENCE'}
+            </Typography>
+            <RelevantWorkExperienceOverview></RelevantWorkExperienceOverview>
+        </Box>
+    )    
+}
+
 const showRelevantSkills = (props, classes) => {
     if (props.infoOverview.relevantSkills.length === 0) {
         return
@@ -192,10 +207,7 @@ function InfoOverviewContainer(props) {
                     </Grid>
                 </Grid>
                 <Grid item xs={6}>
-                    <Typography color="textSecondary" variant="h4" className={classes.experienceTitleStyle}>
-                        {props.infoOverview.selectedGeneralSkill === '' ? 'RECENT EXPERIENCE' : 'RELEVANT EXPERIENCE'}
-                    </Typography>
-                    <RelevantWorkExperienceOverview></RelevantWorkExperienceOverview>
+                    {showRelevantExperiences(props, classes)}
                     {showRelevantSkills(props, classes)}
                 </Grid>
             </Grid>
