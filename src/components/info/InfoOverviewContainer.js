@@ -107,7 +107,7 @@ const showRelevantExperiences = (props, classes) => {
                 {props.infoOverview.selectedGeneralSkill === '' ? 'RECENT EXPERIENCE' : 'RELEVANT EXPERIENCE'}
             </Typography>
             <Typography variant="body2" color="textPrimary" className={classes.experienceTitleStyle}>
-                (select a relevant experience to see more details)
+                (select a work experience to see more details)
             </Typography>
             <RelevantWorkExperienceOverview></RelevantWorkExperienceOverview>
         </Box>
