@@ -155,7 +155,7 @@ function InfoOverviewContainer(props) {
                             <Typography color="textPrimary" variant="body1">
                                 This site was developed in React (
                                     <Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>
-                                    ), feel free to click on the skills to see the relevant work experiences and years of experience I have in them.
+                                    ), feel free to click on the skills to see the relevant work experiences and years of experience that I have in them.
                             </Typography>
                             <Typography color="textPrimary" variant="body1">
                                 Click on the work experiences to see the details.
