@@ -169,7 +169,7 @@ function InfoOverviewContainer(props) {
                                 SKILLS
                             </Typography>
                             <Typography variant="body2" color="textPrimary">
-                                (select the relevant skill to see more details)
+                                (select a skill to see related experience)
                             </Typography>
                             <Box className={classes.skillBoxStyle}>
                                 {showSkill(props, '.NET (C#)', 4, classes)}
