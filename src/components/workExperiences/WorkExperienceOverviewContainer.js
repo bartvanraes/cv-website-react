@@ -29,8 +29,6 @@ const showWorkExperiences = (workExperiences) => {
 }
 
 function WorkExperienceOverviewContainer(props) {
-    console.log('WorkExperienceOverviewContainer')
-    console.log(props.workExperiences.filter)
     const classes = useStyles()
     return (
         <div>            

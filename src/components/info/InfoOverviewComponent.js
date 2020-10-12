@@ -5,10 +5,7 @@ import InfoOverviewDispatchType from 'enums/InfoOverviewDispatchType'
 import './InfoOverviewComponent.css'
 
 const InfoOverview = () => {
-    console.log('InfoOverview')
     const {infoOverview, dispatch} = useContext(InfoOverviewContext)
-
-    console.log(infoOverview)
 
     const toggleSkills = (e) => {
         dispatch({ type: InfoOverviewDispatchType.TOGGLE_SHOW_MORE,  
@@ -19,8 +16,6 @@ const InfoOverview = () => {
     }
 
     const handleGeneralSkillSelect = (e, skill) => {
-        console.log('handleGeneralSkillSelect')
-        console.log(skill)
         dispatch({ type: InfoOverviewDispatchType.GENERAL_SKILL_SELECTED,  
             selectedGeneralSkill: skill
         })

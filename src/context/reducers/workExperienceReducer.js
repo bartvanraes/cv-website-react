@@ -59,10 +59,6 @@ export const workExperienceReducer = (state, action) => {
                 })
             ]
 
-            console.log('displayedWorkExperiences')
-            console.log(displayedWorkExperiences)
-            console.log(filter)
-
             if (filter.confirmTextSearch) { // reset the search filter trigger
                 filter.confirmTextSearch = false
                 filter.search = ''

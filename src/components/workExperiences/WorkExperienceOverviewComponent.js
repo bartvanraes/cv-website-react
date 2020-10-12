@@ -7,8 +7,6 @@ import './WorkExperienceOverviewComponent.css'
 const WorkExperienceOverview = () => {
     const {workExperiences, dispatch} = useContext(WorkExperienceContext)
 
-    console.log('WorkExperienceOverview')
-    console.log(workExperiences)
     useEffect(() => {
         dispatch({ type: WorkExperienceDispatchType.FILTER,  
             filter: {
@@ -19,11 +17,8 @@ const WorkExperienceOverview = () => {
     }, [dispatch])
 
     const changeFilter = (event, value) => {
-        console.log('changeFilter')
         const name = event.currentTarget.name
-        console.log(name)
         let val = !!event.currentTarget.value ? event.currentTarget.value : value 
-        console.log(val)
         val = val === undefined ? '': val
         dispatch({
             type: WorkExperienceDispatchType.FILTER,  

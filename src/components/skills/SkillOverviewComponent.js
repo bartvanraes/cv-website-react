@@ -29,8 +29,6 @@ const SkillOverview = () => {
     }
 
     const confirmTextSearch = (e) => {
-        console.log('confirmTextSearch')
-        console.log(e.keyCode)
         if (e.keyCode === 13) {
             dispatch({
                 type: SkillDispatchType.FILTER,  

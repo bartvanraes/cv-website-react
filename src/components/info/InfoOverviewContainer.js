@@ -43,7 +43,21 @@ const useStyles = makeStyles((theme) => ({
     },
     experienceTitleStyle: {
         marginBottom: theme.spacing(2)
+    },
+    subtitleStyle: {
+        marginBottom: theme.spacing(2)
+    },
+    eductionSchoolStyle: {
+        marginLeft: theme.spacing(2)
+    },
+    educationPeriodStyle: {
+        marginLeft: theme.spacing(3)
+    },
+    eductationContentStyle: {
+        marginTop: theme.spacing(1),
+        marginLeft: theme.spacing(3)
     }
+
 }))
 
 
@@ -113,16 +127,14 @@ const showRelevantSkills = (props, classes) => {
 }
 
 function InfoOverviewContainer(props) {
-    console.log('InfoOverviewContainer')
-    console.log(props)
     const classes = useStyles(props)    
     return (
         <div>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12} md={12}>
-                            <Typography color="textSecondary" variant="h4">
+                        <Grid item xs={11} md={11}>
+                            <Typography color="textSecondary" variant="h4" className={classes.subtitleStyle}>
                                 PROFILE
                             </Typography>
                             <Typography color="textPrimary" variant="body1">
@@ -130,11 +142,20 @@ function InfoOverviewContainer(props) {
                                 software engineer/analyst, both in
                                 consultancy and in-house
                                 development.
+                            </Typography>
+                            <Typography color="textPrimary" variant="body1">
+                            
                                 Constantly improving my software
                                 development skills and keeping up
                                 to date with the latest trends.
                                 Always aiming for the highest
-                                quality
+                                quality.
+                            </Typography>
+                            <br />
+                            <Typography color="textPrimary" variant="body1">
+
+                                This site was developed in React (<Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>), feel free to click on the skills to see the relevant work experiences and years of experience I have in them.
+                             
                             </Typography>
                         </Grid>
                
@@ -204,6 +225,30 @@ function InfoOverviewContainer(props) {
                                     Antwerpen
                                 </Typography>
                             </Grid>                    
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                            <Typography color="textSecondary" variant="h4" className={classes.subtitleStyle}>
+                                EDUCATION
+                            </Typography>
+                            <Typography color="textPrimary" variant="h6" className={classes.eductionSchoolStyle}>
+                                Cevora
+                            </Typography>
+                            <Typography variant="subtitle2" color="textSecondary" className={classes.educationPeriodStyle}>
+                                SEP 2004 - DEC 2004
+                            </Typography>
+                            <Typography color="textPrimary" variant="body1" className={classes.eductationContentStyle}>
+                                .NET Development course
+                            </Typography>
+                            <br />
+                            <Typography color="textPrimary" variant="h6" className={classes.eductionSchoolStyle}>
+                                KDG Hogeschool Groenplaats
+                            </Typography>
+                            <Typography variant="subtitle2" color="textSecondary" className={classes.educationPeriodStyle}>
+                                SEP 1999 - JUN 2002
+                            </Typography>
+                            <Typography color="textPrimary" variant="body1" className={classes.eductationContentStyle}>
+                                Bachelor IT
+                            </Typography>
                         </Grid>
                     </Grid>
                 </Grid>
