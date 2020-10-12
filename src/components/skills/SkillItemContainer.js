@@ -21,7 +21,7 @@ function formatMonths(months) {
 
 function SkillItemContainer(props) {
     return (
-        <Card>
+        <Card elevation={3}>
             <CardContent>
                 <Typography>
                     {props.item.name}

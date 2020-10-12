@@ -31,18 +31,18 @@ const showTechnologies = techList => {
 function RelevantWorkExperienceContainer(props) {
     const classes = useStyles()
     return (
-        <Card onClick={props.toggleExpand} className={classes.cardStyle}>
+        <Card onClick={props.toggleExpand} className={classes.cardStyle} elevation={3}>
             <CardContent>
                 <Grid 
                     container
                     justify="space-between" 
                     > 
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={12}>
                         <Typography variant="h5" className={classes.typeographyStyleParagraph}>
                             {formatCompanyName(props.item)}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={12}>
                         <Typography color="textSecondary" className={classes.typeographyStyleParagraph}>
                             {formatDate(props.item.startDate)} - {formatDate(props.item.endDate)}
                         </Typography>

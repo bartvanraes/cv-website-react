@@ -25,10 +25,11 @@ const useStyles = makeStyles((theme) => ({
     },
     skillBoxStyle: {
         marginLeft: theme.spacing(2),
-        marginTop: theme.spacing(2)
+        marginTop: theme.spacing(2),
+        background: theme.palette.background.default
     },
     skillStyle: {
-        background: '#FFFFFF',
+        background: theme.palette.background.default,
         '&:hover': {
             background: '#c7cbd1'
         },
@@ -102,8 +103,11 @@ const showRelevantExperiences = (props, classes) => {
 
     return (
         <Box>
-            <Typography color="textSecondary" variant="h4" className={classes.experienceTitleStyle}>
+            <Typography color="textSecondary" variant="h4">
                 {props.infoOverview.selectedGeneralSkill === '' ? 'RECENT EXPERIENCE' : 'RELEVANT EXPERIENCE'}
+            </Typography>
+            <Typography variant="body2" color="textPrimary" className={classes.experienceTitleStyle}>
+                (select a relevant experience to see more details)
             </Typography>
             <RelevantWorkExperienceOverview></RelevantWorkExperienceOverview>
         </Box>
@@ -157,15 +161,15 @@ function InfoOverviewContainer(props) {
                                     <Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>
                                     ), feel free to click on the skills to see the relevant work experiences and years of experience that I have in them.
                             </Typography>
-                            <Typography color="textPrimary" variant="body1">
-                                Click on the work experiences to see the details.
-                            </Typography>
                         </Grid>
                
                 
                         <Grid item xs={12} md={8}>
                             <Typography color="textSecondary" variant="h4">
                                 SKILLS
+                            </Typography>
+                            <Typography variant="body2" color="textPrimary">
+                                (select the relevant skill to see more details)
                             </Typography>
                             <Box className={classes.skillBoxStyle}>
                                 {showSkill(props, '.NET (C#)', 4, classes)}

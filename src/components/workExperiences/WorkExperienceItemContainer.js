@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 function WorkExperienceItemContainer(props) {
     const classes = useStyles()
     return (
-        <Card className={classes.cardStyle}>
+        <Card className={classes.cardStyle} elevation={3}>
             <CardContent>
                 <Grid 
                     container 

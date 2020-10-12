@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
+import Box from '@material-ui/core/Box'
 import TabPanel from './TabPanel'
 import Paper from '@material-ui/core/Paper'
 import SkillOverview from './skills/SkillOverviewComponent'
@@ -18,6 +19,9 @@ const useStyles = makeStyles(theme => ({
     },
     headerNameStyle: {
         paddingTop: theme.spacing(2)
+    },
+    backgroundStyle: {
+        background: theme.palette.background.default
     }
 }))
 
@@ -30,7 +34,7 @@ function OverviewContainer(props) {
         classes.headerNameStyle
     )
     return (
-        <div>
+        <Box className={classes.backgroundStyle}>
             <Paper position="static">
                 <Paper evelvation={0}>
                     <Typography variant="h3" align='center' color="textSecondary" className={nameStyle}>
@@ -62,7 +66,7 @@ function OverviewContainer(props) {
                     </Grid>
                 </Grid>
             </Container>
-        </div>
+        </Box>
     )
 }
 

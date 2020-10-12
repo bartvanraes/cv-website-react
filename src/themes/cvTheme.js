@@ -18,6 +18,12 @@ const cvTheme = createMuiTheme({
         text: {
             primary: '#3e6b89',
             secondary: '#3dd2cc',
+        },
+        background: {
+            default: '#f5f5f5',
+            paper: {
+                background: '#f5f5f5'
+            }
         }
     },
     overrides: {
@@ -41,7 +47,7 @@ const cvTheme = createMuiTheme({
             root: {
                 background: '#DEF7F7',                
             }
-        }
+        }       
     }
 })
 
