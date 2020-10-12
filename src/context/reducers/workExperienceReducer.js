@@ -1,8 +1,6 @@
 import WorkExperienceDispatchType from 'enums/WorkExperienceDispatchType'
 
 export const workExperienceReducer = (state, action) => {
-    console.log('workExperienceReducer')
-    console.log(action.type)
     
     switch (action.type) {
         case WorkExperienceDispatchType.FILTER: 
@@ -12,8 +10,6 @@ export const workExperienceReducer = (state, action) => {
                 ...prevFilter,
                 ...action.filter
             }
-
-            console.log(filter)
 
             // if only the text search changed but nothing is commited then only change the filter, not the displayed items
             if (prevFilter.search !== filter.search && !filter.confirmTextSearch) {
@@ -58,6 +54,8 @@ export const workExperienceReducer = (state, action) => {
                     if (returnWork !== null) {
                         return returnWork
                     }
+
+                    return null
                 })
             ]
 
@@ -75,5 +73,7 @@ export const workExperienceReducer = (state, action) => {
                 filter: filter,
                 displayedWorkExperiences: displayedWorkExperiences
             }
+        default:
+            break
     }
 }

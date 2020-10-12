@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react'
 import RelevantWorkExperienceItemContainer from './RelevantWorkExperienceItemContainer'
 import InfoOverviewDispatchType from 'enums/InfoOverviewDispatchType'
 import {InfoOverviewContext} from 'context/InfoOverviewContext'

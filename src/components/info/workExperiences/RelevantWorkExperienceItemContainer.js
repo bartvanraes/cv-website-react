@@ -1,7 +1,6 @@
 import React from 'react'
 import formatDate from 'helpers/formatDate'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
 import Box from '@material-ui/core/Box'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
@@ -37,13 +36,17 @@ function RelevantWorkExperienceContainer(props) {
                 <Grid 
                     container
                     justify="space-between" 
-                    spacing={3}> 
-                    <Typography variant="h5" className={classes.typeographyStyleParagraph}>
-                        {formatCompanyName(props.item)}
-                    </Typography>
-                    <Typography color="textSecondary" className={classes.typeographyStyleParagraph}>
-                        {formatDate(props.item.startDate)} - {formatDate(props.item.endDate)}
-                    </Typography>                
+                    > 
+                    <Grid item xs={12} md={6}>
+                        <Typography variant="h5" className={classes.typeographyStyleParagraph}>
+                            {formatCompanyName(props.item)}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Typography color="textSecondary" className={classes.typeographyStyleParagraph}>
+                            {formatDate(props.item.startDate)} - {formatDate(props.item.endDate)}
+                        </Typography>
+                    </Grid>
                 </Grid>
                 <br />
                 <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>

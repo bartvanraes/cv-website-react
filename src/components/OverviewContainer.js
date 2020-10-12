@@ -1,8 +1,6 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import TabPanel from './TabPanel'
@@ -11,29 +9,34 @@ import SkillOverview from './skills/SkillOverviewComponent'
 import InfoOverview from './info/InfoOverviewComponent'
 import WorkExperienceOverview from './workExperiences/WorkExperienceOverviewComponent'
 import { Typography, makeStyles } from '@material-ui/core'
-
-
-
-function showSkills(skills) {
-    return skills.map((skill) => <li key={skill.name}>{skill.name}</li>)
-}
+import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
     headerStyle: {
-        marginBottom: 20
+        paddingBottom: theme.spacing(2),
+        paddingTop: theme.spacing(1)
+    },
+    headerNameStyle: {
+        paddingTop: theme.spacing(2)
     }
 }))
 
+
+
 function OverviewContainer(props) {
     const classes = useStyles()
+    const nameStyle = clsx(
+        classes.headerStyle,
+        classes.headerNameStyle
+    )
     return (
         <div>
             <Paper position="static">
                 <Paper evelvation={0}>
-                    <Typography variant="h2" align='center' color="textPrimary" className={classes.headerStyle}>
+                    <Typography variant="h3" align='center' color="textSecondary" className={nameStyle}>
                         BART VANRAES
                     </Typography>
-                    <Typography variant="h5" align='center' color="textSecondary" className={classes.headerStyle}>
+                    <Typography variant="h5" align='center' color="textPrimary" className={classes.headerStyle}>
                         Full-stack Developer
                     </Typography>
                 </Paper>

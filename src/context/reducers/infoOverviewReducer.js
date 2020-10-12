@@ -26,7 +26,7 @@ export const infoOverviewReducer = (state, action) => {
                 'angular': ['AngularJS', 'Ngrx'], // yeah yeah, I know, it's definitely not the same
                 'vue': ['VueJS', 'Vue 3'],
                 'databases': ['SQL Server', 'SQLAlchemy', 'Oracle', 'Firebird', 'Oracle', 'PostgreSQL', 'MySQL', 'MongoDB'],
-                'javascript': ['Angular', 'ASP.NET', 'ASP.NET MVC', 'Vue'],
+                'javascript': ['Angular', 'ASP.NET', 'ASP.NET MVC', 'VueJS', 'Vue 3', 'React'],
                 'amazon aws': ['Docker', 'Azure'],
                 'node.js': ['NodeJS', 'Express.js', 'NestJS (node.js)'],
                 'react': ['Redux', 'Context API'],
@@ -43,6 +43,7 @@ export const infoOverviewReducer = (state, action) => {
                     || (relatedTech[generalSkill] !== undefined && work.skills.find(x => relatedTech[generalSkill].find(y => y.toLowerCase() === x.toLowerCase())))) {
                     return work
                 }
+                return null
             })
 
             const relevantSkills = state.skills.filter((skill) => {
@@ -51,9 +52,10 @@ export const infoOverviewReducer = (state, action) => {
                 }
 
                 if (skill.name.toLowerCase() === generalSkill.toLowerCase()
-                    || relatedTech[generalSkill] !== undefined && relatedTech[generalSkill].find(x => x.toLowerCase() === skill.name.toLowerCase())) {
+                    || (relatedTech[generalSkill] !== undefined && relatedTech[generalSkill].find(x => x.toLowerCase() === skill.name.toLowerCase()))) {
                         return skill
                     }
+                return null
             })
 
             return {
@@ -62,5 +64,7 @@ export const infoOverviewReducer = (state, action) => {
                 relevantWorkExperiences,
                 relevantSkills
             }
+        default:
+            break
     }
 }

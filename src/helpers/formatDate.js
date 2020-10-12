@@ -1,6 +1,6 @@
 const formatDate = (dateStr) => {
     // couldn't quickly find a good method or library 
-    const [day, month, year] = dateStr.split('/')
+    const [, month, year] = dateStr.split('/')
     let monthName = ''
     switch (month) {
         case '01':
@@ -38,6 +38,8 @@ const formatDate = (dateStr) => {
             break
         case '12':
             monthName = 'Dec'
+            break
+        default:
             break
     }
 

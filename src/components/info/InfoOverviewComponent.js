@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import {useContext, useEffect} from 'react'
 import InfoOverviewContainer from './InfoOverviewContainer'
 import {InfoOverviewContext} from 'context/InfoOverviewContext'
 import InfoOverviewDispatchType from 'enums/InfoOverviewDispatchType'
@@ -16,12 +16,6 @@ const InfoOverview = () => {
 
             }
         })
-
-        /*setInfoOverview((prevState) => {
-            return {
-                showMoreSkills: !prevState.showMoreSkills
-            }
-        })*/
     }
 
     const handleGeneralSkillSelect = (e, skill) => {
@@ -36,7 +30,7 @@ const InfoOverview = () => {
         dispatch({ type: InfoOverviewDispatchType.GENERAL_SKILL_SELECTED,  
             selectedGeneralSkill: ''
         })
-    }, [])
+    }, [dispatch])
 
     return InfoOverviewContainer({
         infoOverview,

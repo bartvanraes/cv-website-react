@@ -4,22 +4,14 @@ import SkillDispatchType from 'enums/SkillDispatchType'
 export const skillReducer = (state, action) => {
     switch (action.type) {
         case SkillDispatchType.FILTER:
-            console.log('letsfilter')
-            //console.log(action.skill)
             const prevFilter = state.filter
             const filter = {
                 ...prevFilter,
                 ...action.filter
             }
 
-            console.log(filter)
-            console.log(prevFilter.search)
-            console.log(filter.search)
-            console.log(filter.confirmTextSearch)
-
             // if only the text search changed but nothing is commited then only change the filter, not the displayed items
             if (prevFilter.search !== filter.search && !filter.confirmTextSearch) {
-                console.log('ended filtering')
                 return {
                     ...state,
                     filter: filter
@@ -63,14 +55,14 @@ export const skillReducer = (state, action) => {
                     if (returnSkill !== null) {
                         return returnSkill
                     }
+
+                    return null
                 })
             ]
 
             if (filter.confirmTextSearch) { // reset the search filter trigger
                 filter.confirmTextSearch = false
                 filter.search = ''
-                console.log('filter reset')
-                console.log(filter)
             }
 
             return {
@@ -82,6 +74,8 @@ export const skillReducer = (state, action) => {
                         if (skill.category === CategoryType.PROGRAMMING_SKILL) {
                             return skill
                         }
+                        
+                        return null
                     })
                 ],
                 displayedMethodologySkills: [
@@ -89,6 +83,8 @@ export const skillReducer = (state, action) => {
                         if (skill.category === CategoryType.METHODOLOGY) {
                             return skill
                         }
+
+                        return null
                     })
                 ],
                 displayedSoftwareSkills: [
@@ -96,9 +92,12 @@ export const skillReducer = (state, action) => {
                         if (skill.category === CategoryType.SOFTWARE) {
                             return skill
                         }
+
+                        return null
                     })
                 ]
             }
-        break
+        default:
+            break
     }
 }

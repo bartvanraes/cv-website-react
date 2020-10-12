@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: theme.spacing(2),
         marginTop: theme.spacing(3)
     },
+    contactSectionStyle: {
+        marginBottom: theme.spacing(2)
+    },
     skillBoxStyle: {
         marginLeft: theme.spacing(2),
         marginTop: theme.spacing(2)
@@ -55,8 +58,6 @@ const showSkill = (props, name, rating, classes) => {
         }        
     }
 
-    const highlightedStyle = classes.highlightedSkillStyle
-
     let combinedSkillStyle = clsx(
         classes.skillStyle
     )
@@ -70,10 +71,10 @@ const showSkill = (props, name, rating, classes) => {
     
     return (
         <Grid container spacing={3} key={name} className={combinedSkillStyle} onClick={(e) => props.handleGeneralSkillSelect(e, name)}>
-            <Grid item xs={7}>
+            <Grid item xs={6} md={7}>
             {name}
             </Grid>
-            <Grid item xs={5}>
+            <Grid item xs={6} md={5}>
             {dots}
             </Grid>
         </Grid>
@@ -103,7 +104,7 @@ const showRelevantSkills = (props, classes) => {
     return (
         <Box>
             <Typography color="textSecondary" variant="h4" className={classes.experienceTitleStyle}>
-                RELEVANT SKILL EXPERIENCE
+                RELEVANT SKILLS
             </Typography>
             <RelevantSkillOverview></RelevantSkillOverview>
         </Box>
@@ -118,9 +119,9 @@ function InfoOverviewContainer(props) {
     return (
         <div>
             <Grid container spacing={3}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} md={12}>
                             <Typography color="textSecondary" variant="h4">
                                 PROFILE
                             </Typography>
@@ -138,7 +139,7 @@ function InfoOverviewContainer(props) {
                         </Grid>
                
                 
-                        <Grid item xs={8}>
+                        <Grid item xs={12} md={8}>
                             <Typography color="textSecondary" variant="h4">
                                 SKILLS
                             </Typography>
@@ -163,7 +164,7 @@ function InfoOverviewContainer(props) {
                             <Button onClick={props.toggleSkills} className={classes.showMoreStyle}>{ props.infoOverview.showMoreSkills ? 'Show Less' : 'Show More'}</Button>
                         </Grid>
 
-                        <Grid item xs={12}>
+                        <Grid item xs={12} md={12} className={classes.contactSectionStyle}>
                             <Typography color="textSecondary" variant="h4">
                                 CONTACT
                             </Typography>
@@ -206,7 +207,7 @@ function InfoOverviewContainer(props) {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     {showRelevantExperiences(props, classes)}
                     {showRelevantSkills(props, classes)}
                 </Grid>

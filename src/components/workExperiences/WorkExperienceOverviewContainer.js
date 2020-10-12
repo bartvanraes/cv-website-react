@@ -12,12 +12,15 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
     filterStyle: {
-        marginBottom: 20,
-        marginLeft: 20,
-        marginRight: 20
+        marginBottom: theme.spacing(2),
+        marginLeft: theme.spacing(3),
+        marginRight: theme.spacing(2)
+    },
+    filterSwitchStyle: {
+        marginLeft: theme.spacing(2)
     },
     resetStyle: {
-        marginLeft: 20
+        marginLeft: theme.spacing(2)
     }
 }))
 
@@ -45,7 +48,7 @@ function WorkExperienceOverviewContainer(props) {
                                 />
                             </FormControl>
                             
-                            <FormControlLabel
+                            <FormControlLabel className={classes.filterSwitchStyle}
                                 control={
                                     <Switch 
                                         checked={props.workExperiences.filter.temporaryOnly} 
@@ -54,7 +57,7 @@ function WorkExperienceOverviewContainer(props) {
                                         color="primary" />}
                                         label="Temporary jobs only"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className={classes.filterSwitchStyle}
                                 control={
                                 <Switch
                                     checked={props.workExperiences.filter.consultancyOnly}
@@ -65,7 +68,7 @@ function WorkExperienceOverviewContainer(props) {
                                 }
                                 label="Consultancy jobs only"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className={classes.filterSwitchStyle}
                                 control={
                                 <Switch
                                     checked={props.workExperiences.filter.quitOnly}

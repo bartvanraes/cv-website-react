@@ -1,4 +1,4 @@
-import React, {Component, useContext, useEffect} from 'react'
+import {useContext} from 'react'
 import { WorkExperienceContext } from 'context/WorkExperienceContext'
 import { SkillContext } from 'context/SkillContext'
 import { TabContext } from 'context/TabContext'

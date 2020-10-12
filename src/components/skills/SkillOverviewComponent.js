@@ -7,9 +7,6 @@ import './SkillOverviewComponent.css'
 const SkillOverview = () => {
     const {skills, dispatch} = useContext(SkillContext)
 
-    console.log('SkillOverview skills')
-    console.log(skills)
-
     useEffect(() => {
         dispatch({ type: SkillDispatchType.FILTER,  
             filter: {
@@ -17,17 +14,10 @@ const SkillOverview = () => {
                 handsonOnly: false
             }
         })
-    }, [])
+    }, [dispatch])
 
     const changeFilter = (event, value) => {
-        console.log('changeFilter')
-        console.log(event)
-        console.log(value)
-        console.log(event.currentTarget.name)
-        console.log(event.currentTarget.value)
-
         let val = !!event.currentTarget.value ? event.currentTarget.value : value 
-        console.log(val)
         val = val === undefined ? '': val
         const name = event.currentTarget.name
         dispatch({

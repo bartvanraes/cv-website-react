@@ -16,7 +16,7 @@ const WorkExperienceOverview = () => {
                 consultancyOnly: false
             }
         })
-    }, [])
+    }, [dispatch])
 
     const changeFilter = (event, value) => {
         console.log('changeFilter')

@@ -10,7 +10,7 @@ import TextField from '@material-ui/core/TextField'
 import InputLabel from '@material-ui/core/InputLabel'
 import NativeSelect from '@material-ui/core/NativeSelect'
 import FormHelperText from '@material-ui/core/FormHelperText'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, Typography } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import CategoryType from 'enums/CategoryType'
 
@@ -26,9 +26,11 @@ function showSkills(skills, categoryType) {
         case CategoryType.SOFTWARE:
             title = 'Software'
             break
+        default:
+            break
     }
     const titleElement = <Grid item xs={12} key={title}>
-            <h2>{title}</h2>                    
+            <Typography variant="h5">{title}</Typography>                    
     </Grid>
 
     if (skills.length === 0)  {
@@ -36,7 +38,7 @@ function showSkills(skills, categoryType) {
     }
 
     let returnVal = []
-    let returnSkills = skills.map((skill) => <Grid item xs={3} key={skill.name}><SkillItem key={skill.name} item={skill}></SkillItem></Grid>)
+    let returnSkills = skills.map((skill) => <Grid item xs={6} md={3} key={skill.name}><SkillItem key={skill.name} item={skill}></SkillItem></Grid>)
 
     returnVal.push(titleElement)
     returnVal.push(returnSkills)
@@ -46,12 +48,21 @@ function showSkills(skills, categoryType) {
 
 const useStyles = makeStyles(theme => ({
     filterStyle: {
-        marginBottom: 20,
-        marginLeft: 20,
-        marginRight: 20
+        marginBottom: theme.spacing(2),
+        marginLeft: theme.spacing(3),
+        marginRight: theme.spacing(2)
+    },
+    filterSwitchStyle: {
+        marginLeft: theme.spacing(2)
+    },
+    filterDropDownStyle: {
+        marginLeft: theme.spacing(3)
     },
     resetStyle: {
-        marginLeft: 20
+        marginLeft: theme.spacing(2)
+    },
+    inputStyle: {
+        color: '#ffffff'//theme.palette.text.secondary
     }
 }))
 
@@ -65,7 +76,7 @@ function SkillOverviewContainer(props) {
                         <FormGroup row>
                             <FormControl className={classes.filterStyle}>
                                 <TextField 
-                                    label="Filter by name" 
+                                    label="Filter by name"
                                     value={props.skills.filter.search}
                                     onKeyDown={props.confirmTextSearch}
                                     onChange={props.changeFilter}
@@ -73,7 +84,7 @@ function SkillOverviewContainer(props) {
                                 />
                             </FormControl>
                             
-                            <FormControlLabel
+                            <FormControlLabel className={classes.filterSwitchStyle}
                                 control={
                                     <Switch 
                                         checked={props.skills.filter.professionalOnly} 
@@ -82,7 +93,7 @@ function SkillOverviewContainer(props) {
                                         color="primary" />}
                                         label="Professional only"
                             />
-                            <FormControlLabel
+                            <FormControlLabel className={classes.filterSwitchStyle}
                                 control={
                                 <Switch
                                     checked={props.skills.filter.handsonOnly}
@@ -93,7 +104,7 @@ function SkillOverviewContainer(props) {
                                 }
                                 label="Hands-on experience"
                             />
-                            <FormControl>
+                            <FormControl className={classes.filterDropDownStyle}>
                                 <InputLabel htmlFor="category-native-helper">Category</InputLabel>
                                 <NativeSelect
                                     value={props.skills.filter.category}

@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 
@@ -28,11 +27,11 @@ function SkillItemContainer(props) {
                     {props.item.name}
                 </Typography>
                 { props.item.months > 0 ? 
-                    <Typography color="textSecondary">
-                        Experience: {formatMonths(props.item.months)}
+                    <Typography variant="subtitle2" color="textSecondary">
+                        Exp: {formatMonths(props.item.months)}
                     </Typography> 
                     : 
-                    <Typography color="textSecondary">
+                    <Typography variant="subtitle2" color="textSecondary">
                         { props.item.handson ? 'Practical experience' : 'Self taught' }    
                     </Typography>}
             </CardContent>
