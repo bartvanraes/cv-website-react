@@ -22,13 +22,16 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: theme.spacing(2),
         paddingRight: theme.spacing(2),
         whiteSpace: 'pre-line'
+    },
+    cardStyle: {
+        paddingTop: theme.spacing(2)
     }
 }))
 
 function WorkExperienceItemContainer(props) {
     const classes = useStyles()
     return (
-        <Card>
+        <Card className={classes.cardStyle}>
             <CardContent>
                 <Grid 
                     container 

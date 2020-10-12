@@ -153,9 +153,12 @@ function InfoOverviewContainer(props) {
                             </Typography>
                             <br />
                             <Typography color="textPrimary" variant="body1">
-
-                                This site was developed in React (<Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>), feel free to click on the skills to see the relevant work experiences and years of experience I have in them.
-                             
+                                This site was developed in React (
+                                    <Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>
+                                    ), feel free to click on the skills to see the relevant work experiences and years of experience I have in them.
+                            </Typography>
+                            <Typography color="textPrimary" variant="body1">
+                                Click on the work experiences to see the details.
                             </Typography>
                         </Grid>
                
@@ -204,7 +207,7 @@ function InfoOverviewContainer(props) {
                                 className={classes.contactItemStyle}>
                                 <EmailIcon color="secondary" className={classes.iconStyle}></EmailIcon>
                                 <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                    bart.vanraes@gmail.com
+                                    <Link href="mailto:bart.vanraes@gmail.com">bart.vanraes@gmail.com</Link>
                             </Typography>
                             </Grid>
                             <Grid 
