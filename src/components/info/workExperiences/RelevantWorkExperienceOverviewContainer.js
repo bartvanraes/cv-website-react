@@ -21,9 +21,7 @@ function RelevantWorkExperienceOverviewContainer(props) {
     const classes = useStyles()
     return (
         <Grid container spacing={3} className={classes.containerStyle}> 
-
-                {showWorkExperiences(props.infoOverview.relevantWorkExperiences, classes)}
-
+            {showWorkExperiences(props.infoOverview.relevantWorkExperiences, classes)}
         </Grid>
     )
 }

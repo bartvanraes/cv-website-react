@@ -63,6 +63,9 @@ const useStyles = makeStyles(theme => ({
     },
     inputStyle: {
         color: '#ffffff'//theme.palette.text.secondary
+    },
+    containerStyle: {
+        minHeight: 705
     }
 }))
 
@@ -70,7 +73,7 @@ function SkillOverviewContainer(props) {
     const classes = useStyles()
     return (
         <div>            
-            <Grid container spacing={3}> 
+            <Grid container spacing={3} className={classes.containerStyle}> 
                 <Grid item xs={12}>
                     <Paper elevation={3} >
                         <FormGroup row>
