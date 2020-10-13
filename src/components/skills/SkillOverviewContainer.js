@@ -64,16 +64,13 @@ const useStyles = makeStyles(theme => ({
     inputStyle: {
         color: '#ffffff'//theme.palette.text.secondary
     },
-    containerStyle: {
-        minHeight: 705
-    }
 }))
 
 function SkillOverviewContainer(props) {
     const classes = useStyles()
     return (
         <div>            
-            <Grid container spacing={3} className={classes.containerStyle}> 
+            <Grid container spacing={3}> 
                 <Grid item xs={12}>
                     <Paper elevation={3} >
                         <FormGroup row>
@@ -127,12 +124,9 @@ function SkillOverviewContainer(props) {
                             <Button color="secondary" className={classes.resetStyle} onClick={props.resetFilter}>Reset</Button>     
                         </FormGroup>
                     </Paper>    
-                </Grid>
-                
-                {showSkills(props.skills.displayedProgrammingSkills, CategoryType.PROGRAMMING_SKILL)} 
-                
-                {showSkills(props.skills.displayedMethodologySkills, CategoryType.METHODOLOGY)} 
-                
+                </Grid>                
+                {showSkills(props.skills.displayedProgrammingSkills, CategoryType.PROGRAMMING_SKILL)}                 
+                {showSkills(props.skills.displayedMethodologySkills, CategoryType.METHODOLOGY)}                 
                 {showSkills(props.skills.displayedSoftwareSkills, CategoryType.SOFTWARE)}            
             </Grid>
         </div>        

@@ -22,9 +22,6 @@ const useStyles = makeStyles(theme => ({
     resetStyle: {
         marginLeft: theme.spacing(2)
     },
-    containerStyle: {
-        minHeight: 705
-    }
 }))
 
 const showWorkExperiences = (workExperiences) => {
@@ -35,7 +32,7 @@ function WorkExperienceOverviewContainer(props) {
     const classes = useStyles()
     return (
         <div>            
-            <Grid container spacing={3} className={classes.containerStyle}> 
+            <Grid container spacing={3}> 
                 <Grid item xs={12}>
                     <Paper elevation={3} >
                         <FormGroup row>
