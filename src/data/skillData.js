@@ -343,7 +343,7 @@ const skillData = [
     },
     {
         name: 'SQL Server',
-        months: 108,
+        months: 60,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE
