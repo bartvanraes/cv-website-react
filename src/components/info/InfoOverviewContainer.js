@@ -183,7 +183,7 @@ function InfoOverviewContainer(props) {
                                 <Box hidden={!props.infoOverview.showMoreSkills}>
                                     {showSkill(props, 'Amazon AWS', 2, classes)}
                                     {showSkill(props, 'Node.js', 2, classes)}
-                                    {showSkill(props, 'React', 1, classes)}
+                                    {showSkill(props, 'React', 2, classes)}
                                     {showSkill(props, 'Java', 1, classes)}
                                     {showSkill(props, 'Python', 1, classes)}
                                     {showSkill(props, 'UML Design', 2, classes)}
