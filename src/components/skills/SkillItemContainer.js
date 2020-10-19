@@ -1,7 +1,5 @@
 import React from 'react'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
+import { Card, Grid, CardContent, Typography, makeStyles } from '@material-ui/core'
 
 function formatMonths(months) {
     if (months === 1) {
@@ -16,10 +14,20 @@ function formatMonths(months) {
     }
 
     return `${(months / 12).toLocaleString()} years`
-
 }
 
+const useStyles = makeStyles((theme) => ({
+    experienceGrid: {
+        marginTop: theme.spacing(0.1),
+        paddingLeft: theme.spacing(1.5),
+        paddingRight: theme.spacing(1),
+        alignItems: 'baseline'
+
+    }
+}))
+
 function SkillItemContainer(props) {
+    const classes = useStyles()
     return (
         <Card elevation={3}>
             <CardContent>
@@ -27,9 +35,19 @@ function SkillItemContainer(props) {
                     {props.item.name}
                 </Typography>
                 { props.item.months > 0 ? 
-                    <Typography variant="subtitle2" color="textSecondary">
-                        Exp: {formatMonths(props.item.months)}
-                    </Typography> 
+                    <Grid 
+                    container 
+                    justify="flex-start" 
+                    spacing={3}
+                    className={classes.experienceGrid}> 
+                        <Typography variant="subtitle2" color="textSecondary">
+                            Experience:
+                        </Typography>
+                        &nbsp;
+                        <Typography variant="subtitle2" color="textSecondary">
+                            {formatMonths(props.item.months)}
+                        </Typography> 
+                    </Grid>
                     : 
                     <Typography variant="subtitle2" color="textSecondary">
                         { props.item.handson ? 'Practical experience' : 'Self taught' }    
