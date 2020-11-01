@@ -474,6 +474,13 @@ const skillData = [
         legacy: false,
         category: CategoryType.SOFTWARE
     },
+    {
+        name: 'Jira',
+        months: 8,
+        professional: true,
+        legacy: false,
+        category: CategoryType.SOFTWARE
+    },
     // Self taught
     {
         name: 'Java',
