@@ -4,4 +4,5 @@ const CategoryType = {
     SOFTWARE: 'software'
 }
 
+
 export default CategoryType
