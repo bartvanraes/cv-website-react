@@ -1,4 +1,7 @@
 const formatDate = (dateStr) => {
+    if (dateStr === null) {
+        return '...'
+    }
     // couldn't quickly find a good method or library 
     const [, month, year] = dateStr.split('/')
     let monthName = ''

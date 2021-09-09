@@ -1,5 +1,24 @@
 const workExerperienceData = [
     {
+        company: 'Pionira',
+        location: 'Remote/Zeebrugge',
+        position: 'Angular/.NET Core Developer',
+        startDate: '04/12/2020',
+        endDate: null,
+        temporary: false,
+        consultancy: false,
+        quit: false,
+        outline: 'Full stack development in Angular, .NET Core and Typescript for projects in the logistics sector.',
+        responsibilities: `• Development and maintenance of multiple projects in Angular and .NET        
+        • Setting up new microservices
+        • Adding new functionality to an existing Xamarin app
+        • Hosting projects in Azure
+        • Agile development with Devops`,
+        projects: `• Development of a visit registration app to send and confirm invitations.
+        • Development of multiple microservices in .NET Core.`,
+        skills: ['Angular', '.NET Core', 'Entity Framework', 'Dapper', 'SQL Server', 'Azure', 'TypeScript', 'Ngrx', 'Xamarin', 'Electron', 'Formly']
+    },
+    {
         company: 'Twikit',
         location: 'Antwerp',
         position: 'Angular/Nest.js Developer',

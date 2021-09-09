@@ -26,14 +26,14 @@ const skillData = [
     },
     {
         name: 'Angular',
-        months: 9.5,
+        months: 15,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
     },
     {
         name: 'Ngrx',
-        months: 9.5,
+        months: 15,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -82,7 +82,7 @@ const skillData = [
     },
     {
         name: '.NET Core',
-        months: 3,
+        months: 6,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -138,7 +138,7 @@ const skillData = [
     },
     {
         name: 'Entity Framework',
-        months: 30,
+        months: 35,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -194,7 +194,7 @@ const skillData = [
     },
     {
         name: 'Dapper',
-        months: 2,
+        months: 7,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -229,7 +229,7 @@ const skillData = [
     },
     {
         name: 'Typescript',
-        months: 12,
+        months: 18,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -237,6 +237,20 @@ const skillData = [
     {
         name: 'RabbitMQ',
         months: 2,
+        professional: true,
+        legacy: false,
+        category: CategoryType.PROGRAMMING_SKILL
+    },
+    {
+        name: 'Electron',
+        months: 1,
+        professional: true,
+        legacy: false,
+        category: CategoryType.PROGRAMMING_SKILL
+    },
+    {
+        name: 'Formly',
+        months: 5,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -343,7 +357,7 @@ const skillData = [
     },
     {
         name: 'SQL Server',
-        months: 60,
+        months: 69,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE
@@ -548,8 +562,8 @@ const skillData = [
     },
     {
         name: 'Xamarin',
-        months: 0,
-        professional: false,
+        months: 2,
+        professional: true,
         legacy: false,
         handson: true,
         category: CategoryType.PROGRAMMING_SKILL
@@ -684,10 +698,10 @@ const skillData = [
     },
     {
         name: 'Azure',
-        months: 0,
-        professional: false,
+        months: 1,
+        professional: true,
         legacy: false,
-        handson: false,
+        handson: true,
         category: CategoryType.SOFTWARE
     },
     {

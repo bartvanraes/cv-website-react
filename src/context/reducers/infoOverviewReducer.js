@@ -15,7 +15,7 @@ export const infoOverviewReducer = (state, action) => {
                 expandedWorkExperience: expandedWork
             }
         case InfoOverviewDispatchType.GENERAL_SKILL_SELECTED:
-            const defaultWorkExperiences = ['Twikit', 'Geo-IT', 'ScriptBook']
+            const defaultWorkExperiences = ['Pionira', 'Twikit', 'Geo-IT']
             const defaultSkills = ['.NET (C#)', 'Angular', 'VueJS', 'Python', 'React', 'Java']
 
             const generalSkill = action.selectedGeneralSkill.toLowerCase()
