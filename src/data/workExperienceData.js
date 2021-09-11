@@ -16,7 +16,7 @@ const workExerperienceData = [
         • Agile development with Devops`,
         projects: `• Development of a visit registration app to send and confirm invitations.
         • Development of multiple microservices in .NET Core.`,
-        skills: ['Angular', '.NET Core', 'Entity Framework', 'Dapper', 'SQL Server', 'Azure', 'TypeScript', 'Ngrx', 'Xamarin', 'Electron', 'Formly']
+        skills: ['.NET', 'Angular', 'ASP.NET MVC', '.NET Core', 'Entity Framework', 'Dapper', 'SQL Server', 'Azure', 'TypeScript', 'Ngrx', 'Xamarin', 'Electron', 'Formly']
     },
     {
         company: 'Twikit',
@@ -51,7 +51,7 @@ const workExerperienceData = [
         projects: `• Creating a working prototype to present to the clients
         • Setup of new projects in Vue and .NET Core
         • Security with Identity Server`,
-        skills: ['Vue', 'Vuex', '.NET Core', 'Identity Server', 'OpenLayers', 'Vuetify', 'MapGuide', 'PostgreSQL', 'Dapper', 'Entity Framework']
+        skills: ['.NET', 'Vue', 'Vuex', '.NET Core', 'Identity Server', 'OpenLayers', 'Vuetify', 'MapGuide', 'PostgreSQL', 'Dapper', 'Entity Framework']
     },
     {
         company: 'ScriptBook',
