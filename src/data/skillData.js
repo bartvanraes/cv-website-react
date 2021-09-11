@@ -392,7 +392,7 @@ const skillData = [
     },
     {
         name: 'Git',
-        months: 24,
+        months: 34,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE
