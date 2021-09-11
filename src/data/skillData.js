@@ -5,7 +5,7 @@ const skillData = [
     //Programming language
     {
         name: '.NET (C#)',
-        months: 108,
+        months: 120,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -26,7 +26,7 @@ const skillData = [
     },
     {
         name: 'Angular',
-        months: 15,
+        months: 18,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -61,7 +61,7 @@ const skillData = [
     },
     {
         name: 'Rest API',
-        months: 36,
+        months: 46,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -166,21 +166,21 @@ const skillData = [
     },
     {
         name: 'Webservices',
-        months: 60,
+        months: 70,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
     },
     {
         name: 'CSS',
-        months: 72,
+        months: 82,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
     },
     {
         name: 'HTML',
-        months: 72,
+        months: 82,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -201,7 +201,7 @@ const skillData = [
     },
     {
         name: 'LINQ',
-        months: 48,
+        months: 58,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
@@ -301,14 +301,14 @@ const skillData = [
     //Software
     {
         name: 'Visual Studio .NET',
-        months: 96,
+        months: 106,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE
     },
     {
         name: 'Visual Studio Code',
-        months: 12,
+        months: 22,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE
@@ -322,7 +322,7 @@ const skillData = [
     },
     {
         name: 'Microsoft Office',
-        months: 60,
+        months: 70,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE
@@ -357,7 +357,7 @@ const skillData = [
     },
     {
         name: 'SQL Server',
-        months: 69,
+        months: 79,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE
@@ -420,7 +420,7 @@ const skillData = [
     },
     {
         name: 'Windows',
-        months: 132,
+        months: 142,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE

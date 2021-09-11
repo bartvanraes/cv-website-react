@@ -8,7 +8,7 @@ const workExerperienceData = [
         temporary: false,
         consultancy: false,
         quit: false,
-        outline: 'Full stack development in Angular, .NET Core and Typescript for projects in the logistics sector.',
+        outline: 'Full stack development in Angular, .NET Core and Xamarin for projects in the logistics sector.',
         responsibilities: `• Development and maintenance of multiple projects in Angular and .NET        
         • Setting up new microservices
         • Adding new functionality to an existing Xamarin app

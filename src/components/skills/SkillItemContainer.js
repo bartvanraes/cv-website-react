@@ -13,7 +13,7 @@ function formatMonths(months) {
         return '1 year'
     }
 
-    return `${(months / 12).toLocaleString()} years`
+    return `${Math.round((months / 12).toLocaleString())} years`
 }
 
 const useStyles = makeStyles((theme) => ({
