@@ -298,6 +298,13 @@ const skillData = [
         legacy: false,
         category: CategoryType.METHODOLOGY
     },
+    {
+        name: 'Devops',
+        months: 2,
+        professional: true,
+        legacy: false,
+        category: CategoryType.METHODOLOGY
+    },
     //Software
     {
         name: 'Visual Studio .NET',
