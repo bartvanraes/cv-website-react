@@ -174,7 +174,7 @@ function InfoOverviewContainer(props) {
                             <Box className={classes.skillBoxStyle}>
                                 {showSkill(props, '.NET (C#)', 4, classes)}
                                 {showSkill(props, 'HTML CSS', 4, classes)}
-                                {showSkill(props, 'Angular', 3, classes)}
+                                {showSkill(props, 'Angular', 4, classes)}
                                 {showSkill(props, 'Vue', 3, classes)}
                                 {showSkill(props, 'Databases', 4, classes)}
                                 {showSkill(props, 'Javascript', 4, classes)}
