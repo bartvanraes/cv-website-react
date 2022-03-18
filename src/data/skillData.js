@@ -229,7 +229,7 @@ const skillData = [
     },
     {
         name: 'Typescript',
-        months: 18,
+        months: 24,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
