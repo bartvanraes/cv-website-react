@@ -82,7 +82,7 @@ const skillData = [
     },
     {
         name: '.NET Core',
-        months: 6,
+        months: 12,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL
