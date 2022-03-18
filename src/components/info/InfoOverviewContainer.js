@@ -142,7 +142,7 @@ function InfoOverviewContainer(props) {
                                 PROFILE
                             </Typography>
                             <Typography color="textPrimary" variant="body1">
-                                Over 12 years of experience as a
+                                Over 13 years of experience as a
                                 software engineer/analyst, both in
                                 consultancy and in-house
                                 development.
