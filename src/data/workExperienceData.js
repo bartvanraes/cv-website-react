@@ -4,7 +4,7 @@ const workExerperienceData = [
         location: 'Remote/Zeebrugge',
         position: 'Angular/.NET Core Developer',
         startDate: '04/12/2020',
-        endDate: null,
+        endDate: '29/09/2020',
         temporary: false,
         consultancy: false,
         quit: false,
