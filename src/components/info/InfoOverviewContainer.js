@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: theme.spacing(2),
         marginTop: theme.spacing(3)
     },
+    contactItemStyleRight: {
+        marginTop: theme.spacing(3)
+    },
     contactSectionStyle: {
         marginBottom: theme.spacing(2)
     },
@@ -262,7 +265,15 @@ function InfoOverviewContainer(props) {
                 <Grid item xs={12} md={6}>
                     {showRelevantExperiences(props, classes)}
                     {showRelevantSkills(props, classes)}
-                </Grid>
+                    <Box className={classes.contactItemStyleRight}>
+                        <Typography color="textSecondary" variant="h4" className={classes.subtitleStyle}>
+                            HOBBIES
+                        </Typography>
+                        <Typography color="textPrimary" variant="h6" className={classes.eductionSchoolStyle}>
+                            Travel | Jogging | Concerts | Gaming | Social events
+                        </Typography>
+                    </Box>
+                </Grid>                
             </Grid>
 
         </div>

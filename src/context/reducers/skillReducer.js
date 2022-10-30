@@ -67,6 +67,8 @@ export const skillReducer = (state, action) => {
                                     returnSkill = null
                                 }
                                 break
+                            default: 
+                                returnSkill = null
                         }
                     }
 
