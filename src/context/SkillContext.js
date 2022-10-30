@@ -14,6 +14,8 @@ const SkillProvider = ({ children }) => {
                 professionalOnly: false,
                 legacyOnly: null,
                 category: '',
+                interestLevel: '',
+                experience: '',
                 handsonOnly: true,
                 confirmTextSearch: false
             },

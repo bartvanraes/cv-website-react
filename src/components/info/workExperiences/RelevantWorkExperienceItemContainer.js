@@ -19,6 +19,11 @@ const useStyles = makeStyles(theme => ({
         paddingRight: theme.spacing(2),
         whiteSpace: 'pre-line'
     },
+    typeographyStyleParagraphTitle: {
+        paddingLeft: theme.spacing(1),
+        paddingRight: theme.spacing(2),
+        whiteSpace: 'pre-line'
+    },
     cardStyle: {
         cursor: 'pointer'
     }
@@ -38,8 +43,8 @@ function RelevantWorkExperienceContainer(props) {
                     justify="space-between" 
                     > 
                     <Grid item xs={12} md={12}>
-                        <Typography variant="h5" className={classes.typeographyStyleParagraph}>
-                            {formatCompanyName(props.item)}
+                        <Typography variant="h5" className={classes.typeographyStyleParagraphTitle}>
+                            {props.item.position} - {formatCompanyName(props.item)}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={12}>

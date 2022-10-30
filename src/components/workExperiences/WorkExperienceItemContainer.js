@@ -38,7 +38,7 @@ function WorkExperienceItemContainer(props) {
                     justify="space-between" 
                     spacing={3}> 
                     <Typography variant="h5" className={classes.typeographyStyleParagraph}>
-                        {formatCompanyName(props.item)}
+                        {props.item.position} - {formatCompanyName(props.item)}
                     </Typography>
                     <Typography color="textSecondary" className={classes.typeographyStyleParagraph}>
                         {formatDate(props.item.startDate)} - {formatDate(props.item.endDate)}

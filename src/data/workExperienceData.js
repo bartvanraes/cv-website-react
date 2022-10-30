@@ -89,7 +89,7 @@ const workExerperienceData = [
         skills: ['.NET', 'Angular', 'ASP.NET MVC', 'WPF', 'jQuery', 'nHibernate']
     },
     {
-        company: 'Multiple interim projects via Accent Jobs',
+        company: 'Interim projects via Accent Jobs',
         location: '',
         position: '.NET Developer',
         startDate: '01/09/2014',
@@ -225,7 +225,7 @@ const workExerperienceData = [
         skills: ['Mercury Loadrunner', 'VBScript']
     },
     {
-        company: 'Business Architects International',
+        company: 'BAI',
         location: 'Mechelen',
         position: 'UML Designer',
         startDate: '01/02/2005',

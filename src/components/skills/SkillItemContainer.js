@@ -49,9 +49,15 @@ function SkillItemContainer(props) {
                         </Typography> 
                     </Grid>
                     : 
-                    <Typography variant="subtitle2" color="textSecondary">
-                        { props.item.handson ? 'Practical experience' : 'Self taught' }    
-                    </Typography>}
+                    <Grid 
+                    container 
+                    justify="flex-start" 
+                    spacing={3}
+                    className={classes.experienceGrid}> 
+                        <Typography variant="subtitle2" color="textSecondary">
+                            { props.item.handson ? 'Practical experience' : 'Self taught' }    
+                        </Typography>
+                    </Grid>}
             </CardContent>
         </Card>
     )

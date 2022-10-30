@@ -13,6 +13,8 @@ import FormHelperText from '@material-ui/core/FormHelperText'
 import { makeStyles, Typography } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import CategoryType from 'enums/CategoryType'
+import SkillInterestType from 'enums/SkillInterestType'
+import ExperienceType from 'enums/ExperienceType'
 
 function showSkills(skills, categoryType) {
     let title = ''
@@ -84,26 +86,23 @@ function SkillOverviewContainer(props) {
                                 />
                             </FormControl>
                             
-                            <FormControlLabel className={classes.filterSwitchStyle}
-                                control={
-                                    <Switch 
-                                        checked={props.skills.filter.professionalOnly} 
-                                        onChange={props.changeFilter} 
-                                        name="professionalOnly"
-                                        color="primary" />}
-                                        label="Professional only"
-                            />
-                            <FormControlLabel className={classes.filterSwitchStyle}
-                                control={
-                                <Switch
-                                    checked={props.skills.filter.handsonOnly}
+                            <FormControl className={classes.filterDropDownStyle}>
+                                <InputLabel htmlFor="category-native-helper">Experience</InputLabel>
+                                <NativeSelect
+                                    value={props.skills.filter.experience}
                                     onChange={props.changeFilter}
-                                    name="handsonOnly"
-                                    color="primary"
-                                />
-                                }
-                                label="Hands-on experience"
-                            />
+                                    inputProps={{
+                                        name: 'experience',
+                                        id: 'experience-native-helper',
+                                    }}
+                                >
+                                    <option aria-label="None" value="" />
+                                    <option value={ExperienceType.PROFESSIONAL}>Professional experience only</option>
+                                    <option value={ExperienceType.HANDS_ON}>Hands-on experience (not professional)</option>
+                                    <option value={ExperienceType.SELF_TAUGHT}>Self taught (hands-off)</option>
+                                </NativeSelect>
+                                <FormHelperText>Select skill category</FormHelperText>
+                            </FormControl>
                             <FormControl className={classes.filterDropDownStyle}>
                                 <InputLabel htmlFor="category-native-helper">Category</InputLabel>
                                 <NativeSelect
@@ -120,6 +119,22 @@ function SkillOverviewContainer(props) {
                                     <option value={CategoryType.SOFTWARE}>Software</option>
                                 </NativeSelect>
                                 <FormHelperText>Select skill category</FormHelperText>
+                            </FormControl>
+                            <FormControl className={classes.filterDropDownStyle}>
+                                <InputLabel htmlFor="category-native-helper">Interest level</InputLabel>
+                                <NativeSelect
+                                    value={props.skills.filter.interestLevel}
+                                    onChange={props.changeFilter}
+                                    inputProps={{
+                                        name: 'interestLevel',
+                                        id: 'interested-native-helper',
+                                    }}
+                                >
+                                    <option aria-label="None" value="" />
+                                    <option value={SkillInterestType.HIGHLY_INTERESTED}>I'm highly interested in these</option>
+                                    <option value={SkillInterestType.AVOID}>Don't contact me for these</option>
+                                </NativeSelect>
+                                <FormHelperText>Filter by interest level</FormHelperText>
                             </FormControl>
                             <Button color="secondary" className={classes.resetStyle} onClick={props.resetFilter}>Reset</Button>     
                         </FormGroup>

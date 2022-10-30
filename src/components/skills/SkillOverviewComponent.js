@@ -47,6 +47,8 @@ const SkillOverview = () => {
                 professionalOnly: false,
                 legacyOnly: null,
                 category: '',
+                interestLevel: '',
+                experience: '',
                 handsonOnly: false,
                 confirmTextSearch: false
             }

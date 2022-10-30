@@ -1,4 +1,5 @@
 import CategoryType from 'enums/CategoryType'
+import ExperienceType from 'enums/ExperienceType'
 import SkillDispatchType from 'enums/SkillDispatchType'
 
 export const skillReducer = (state, action) => {
@@ -28,6 +29,7 @@ export const skillReducer = (state, action) => {
                         }
                     }
 
+                    // OLD FILTERS
                     if (returnSkill !== null && filter.professionalOnly !== undefined && filter.professionalOnly !== null) {
                         if (filter.professionalOnly && skill.professional !== filter.professionalOnly) { // at the moment if not professionalOnly return everything 
                             returnSkill = null
@@ -46,8 +48,36 @@ export const skillReducer = (state, action) => {
                         }
                     }
 
+                    // END OF OLD FILTERS
+
+                    if (returnSkill !== null && filter.experience !== undefined && filter.experience !== null && filter.experience !== '') {
+                        switch (filter.experience) {
+                            case ExperienceType.PROFESSIONAL:
+                                if (!skill.professional) {
+                                    returnSkill = null
+                                }
+                                break
+                            case ExperienceType.HANDS_ON:
+                                if (skill.professional || !skill.handson) {
+                                    returnSkill = null
+                                }
+                                break
+                            case ExperienceType.SELF_TAUGHT:
+                                if (skill.professional || skill.handson) {
+                                    returnSkill = null
+                                }
+                                break
+                        }
+                    }
+
                     if (returnSkill !== null && filter.category !== undefined && filter.category !== null && filter.category !== '') {
                         if (skill.category !== filter.category) {
+                            returnSkill = null
+                        }
+                    }
+
+                    if (returnSkill !== null && filter.interestLevel !== undefined && filter.interestLevel !== null && filter.interestLevel !=='') {
+                        if (skill.interestLevel !== filter.interestLevel) {
                             returnSkill = null
                         }
                     }
