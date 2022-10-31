@@ -336,6 +336,15 @@ const skillData = [
         interestLevel: SkillInterestType.INTERESTED
     },
     {
+        name: 'Knockout.js',
+        months: 1,
+        professional: true,
+        legacy: true,
+        handson: true,
+        category: CategoryType.PROGRAMMING_SKILL,
+        interestLevel: SkillInterestType.AVOID
+    },
+    {
         name: 'Winforms',
         months: 24,
         professional: true,
