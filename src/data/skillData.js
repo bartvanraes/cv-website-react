@@ -847,7 +847,16 @@ const skillData = [
         legacy: false,
         handson: false,
         category: CategoryType.PROGRAMMING_SKILL,
-        interestLevel: SkillInterestType.INTERESTED
+        interestLevel: SkillInterestType.HIGHLY_INTERESTED
+    },
+    {
+        name: '.NET MAUI',
+        months: 0,
+        professional: false,
+        legacy: false,
+        handson: false,
+        category: CategoryType.PROGRAMMING_SKILL,
+        interestLevel: SkillInterestType.HIGHLY_INTERESTED
     },
     {
         name: 'Express.js',
