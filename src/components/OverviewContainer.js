@@ -8,6 +8,7 @@ import TabPanel from './TabPanel'
 import Paper from '@material-ui/core/Paper'
 import SkillOverview from './skills/SkillOverviewComponent'
 import InfoOverview from './info/InfoOverviewComponent'
+import FAQOverview from './faq/FAQOverviewComponent'
 import WorkExperienceOverview from './workExperiences/WorkExperienceOverviewComponent'
 import { Typography, makeStyles } from '@material-ui/core'
 import clsx from 'clsx'
@@ -48,6 +49,7 @@ function OverviewContainer(props) {
                     <Tab label="Overview"></Tab>
                     <Tab label="Experience"></Tab>
                     <Tab label="Skills"></Tab>
+                    <Tab label="Info"></Tab>
                 </Tabs>
             </Paper>
             <Container>
@@ -61,6 +63,9 @@ function OverviewContainer(props) {
                         </TabPanel>
                         <TabPanel value={props.tab.selectedTab} index={2}>
                             <SkillOverview></SkillOverview>
+                        </TabPanel>
+                        <TabPanel value={props.tab.selectedTab} index={3}>
+                            <FAQOverview></FAQOverview>
                         </TabPanel>
                                 
                     </Grid>

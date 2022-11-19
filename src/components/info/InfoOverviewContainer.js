@@ -4,6 +4,8 @@ import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import MyLocationIcon from '@material-ui/icons/MyLocation'
+import CakeIcon from '@material-ui/icons/Cake';
+import EuroSymbolIcon from '@material-ui/icons/EuroSymbol';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
 import RelevantWorkExperienceOverview from './workExperiences/RelevantWorkExperienceOverviewComponent'
 import RelevantSkillOverview from './skills/RelevantSkillOverviewComponent'
@@ -150,8 +152,7 @@ function InfoOverviewContainer(props) {
                                 consultancy and in-house
                                 development.
                             </Typography>
-                            <Typography color="textPrimary" variant="body1">
-                            
+                            <Typography color="textPrimary" variant="body1">                            
                                 Constantly improving my software
                                 development skills and keeping up
                                 to date with the latest trends.
@@ -163,6 +164,10 @@ function InfoOverviewContainer(props) {
                                 This site was developed in React (
                                     <Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>
                                     ), feel free to click on the skills to see the relevant work experiences and years of experience that I have in them.
+                            </Typography>
+                            <br />
+                            <Typography color="textPrimary" variant="body1">                            
+                                Please read the 'Info' section of my website before contacting me.
                             </Typography>
                         </Grid>
                
@@ -234,7 +239,25 @@ function InfoOverviewContainer(props) {
                                 <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
                                     Antwerpen
                                 </Typography>
-                            </Grid>                    
+                            </Grid>     
+                            <Grid
+                                container
+                                spacing={3}
+                                className={classes.contactItemStyle}>
+                                    <CakeIcon color="secondary" className={classes.iconStyle}></CakeIcon>
+                                    <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
+                                        02/07/1981
+                                </Typography>
+                            </Grid>          
+                            <Grid
+                                container
+                                spacing={3}
+                                className={classes.contactItemStyle}>
+                                    <EuroSymbolIcon color="secondary" className={classes.iconStyle}></EuroSymbolIcon>
+                                    <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
+                                        Employee (unemployed)
+                                </Typography>
+                            </Grid>               
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <Typography color="textSecondary" variant="h4" className={classes.subtitleStyle}>
