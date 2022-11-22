@@ -53,7 +53,7 @@ function FAQOverviewContainer(props) {
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
                 600€, I'm not considering to become a freelancer for less.<br/>
-                For a 4/5th employee contract, I am aiming at 4000€ bruto (after the indexation of january 2023), but it depends on the amount of extralegal benefits.
+                For a 4/5th employee contract, I am aiming around 4000€ bruto (after the indexation of january 2023), but it depends on the amount of extralegal benefits.
             </Typography>  
             <Typography variant="h5" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
                 Minimum duration of a project
@@ -104,7 +104,7 @@ function FAQOverviewContainer(props) {
                 Q: Favourite type of company?
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
-                A: I prefer larger companies because they tend to have better project management and less chaos.<br/>
+                A: I prefer larger companies because they tend to have better project management and code quality.<br/>
                 Also I value diversity within a company.
             </Typography>   
             <Typography variant="h6" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
@@ -124,32 +124,20 @@ function FAQOverviewContainer(props) {
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
                 A: I'm always willing to study new technologies and then see if I like them or not.<br/>
-                If it's about working full-time, accepting low budget projects, legacy technologies or commuting to difficult to reach locations: hell no!
+                If it's about working full-time, accepting low budget projects, legacy technologies or commuting to difficult to reach locations: no.
             </Typography>   
             <Typography variant="h6" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
                 Q: Why do you want to work part-time?
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
                 A: I feel much happier this way, just imagine having a mini weekend in the middle of the week.
-            </Typography> 
-            <Typography variant="h6" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
-                Q: Are you stress-resistant?
-            </Typography>
-            <Typography variant="body1" className={classes.textStyle} gutterBottom>
-                A: not really.
-            </Typography> 
+            </Typography>             
             <Typography variant="h6" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
                 Q: We have your CV in our database, should we just send it to all of our clients?
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
                 A: Never ever send my CV to a client without my explicit permission or your company will get blacklisted.<br/>
                 It happened before that my CV ended up at an ex-employer without my knowledge months after I had contact with the recruitment agency.
-            </Typography> 
-            <Typography variant="h6" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
-                Q: What is your opinion about Elon Musk?
-            </Typography>
-            <Typography variant="body1" className={classes.textStyle} gutterBottom>
-                A: He sounds like a boss from Hell and his fans are the worst.
             </Typography> 
         </Box>
     )
