@@ -40,7 +40,7 @@ function FAQOverviewContainer(props) {
                 Status
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
-                Employee, but I'm considering to become a freelancer if the project is great
+                Employee, but I'm considering to become a freelancer if the project is a great match
             </Typography>
             <Typography variant="h5" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
                 Work schedule
@@ -72,7 +72,7 @@ function FAQOverviewContainer(props) {
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
                 Full-stack development with modern technologies in a professional environment with good project management.<br />
-                Check the 'Skills' page to filter on the technologies I prefer to work with at the moment.<br />
+                Please check the 'Skills' page to filter on the technologies I prefer to work with at the moment.<br />
                 If the project is in Antwerp I can definitely work on site, otherwise remote.
             </Typography> 
             <br />
@@ -85,7 +85,7 @@ function FAQOverviewContainer(props) {
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
                 A: I often worked with temporary contracts or as a consultant via different consultancy agencies.<br/>
                 Many jobs were with temporary contracts or even interim contracts (you can filter on those in the 'Experience' section).<br/>
-                Currently there are only 2 jobs were I quit myself due to really poor project management and technology decisions I couldn't agree with.<br/>
+                Currently, there are only 2 jobs where I quit myself due to really poor project management and technology decisions I couldn't agree with.<br/>
                 Other reasons why jobs ended: company restructuring, departments that closed down and even jobs where I got the wrong role or technology to work with.
             </Typography>      
             <Typography variant="h6" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
@@ -130,7 +130,7 @@ function FAQOverviewContainer(props) {
                 Q: Why do you want to work part-time?
             </Typography>
             <Typography variant="body1" className={classes.textStyle} gutterBottom>
-                A: I feel much happier this way, just imagine having a mini weekend in the middle of the week.
+                A: I am much happier this way, just imagine having a mini weekend in the middle of the week.
             </Typography>             
             <Typography variant="h6" color="textPrimary" className={classes.subtitleStyle} gutterBottom>
                 Q: We have your CV in our database, should we just send it to all of our clients?

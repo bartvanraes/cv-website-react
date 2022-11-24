@@ -237,7 +237,7 @@ const workExerperienceData = [
         outline: `UML Designer on a project for Rabobank`,
         responsibilities: `• UML Designer: designed a loan & insurance application for Rabobank in Rational Rose (UML).
         Cap Gemini was going to do the actual implementation based on our models.
-        • Release Manager: I had the responsability of the last 3 releases.`,
+        • Release Manager: I had the responsibility of the last 3 releases.`,
         projects: `Rabobank`,
         skills: ['UML Design', 'Rational Rose', 'SourceSafe']
     },
