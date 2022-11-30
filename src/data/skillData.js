@@ -814,6 +814,15 @@ const skillData = [
         interestLevel: SkillInterestType.HIGHLY_INTERESTED
     },
     {
+        name: 'RepoDb',
+        months: 0,
+        professional: false,
+        legacy: false,
+        handson: false,
+        category: CategoryType.PROGRAMMING_SKILL,
+        interestLevel: SkillInterestType.INTERESTED
+    },
+    {
         name: 'Tensorflow 2.0',
         months: 0,
         professional: false,
