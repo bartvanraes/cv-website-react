@@ -164,11 +164,7 @@ function InfoOverviewContainer(props) {
                                 This site was developed in React (
                                     <Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>
                                     ), feel free to click on the skills to see the relevant work experiences and years of experience that I have in them.
-                            </Typography>
-                            <br />
-                            <Typography color="textPrimary" variant="body1">                            
-                                Please read the 'Info' section of my website before contacting me.
-                            </Typography>
+                            </Typography>                            
                         </Grid>
                
                 
@@ -189,7 +185,7 @@ function InfoOverviewContainer(props) {
                                 
                                 
                                 <Box hidden={!props.infoOverview.showMoreSkills}>
-                                    {showSkill(props, 'Amazon AWS', 2, classes)}
+                                    {showSkill(props, 'Cloud', 2, classes)}
                                     {showSkill(props, 'Node.js', 2, classes)}
                                     {showSkill(props, 'React', 2, classes)}
                                     {showSkill(props, 'Java', 1, classes)}

@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+/*Page removed at the moment*/
 function FAQOverviewContainer(props) {
 
     const classes = useStyles(props)    

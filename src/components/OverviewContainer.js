@@ -49,7 +49,6 @@ function OverviewContainer(props) {
                     <Tab label="Overview"></Tab>
                     <Tab label="Experience"></Tab>
                     <Tab label="Skills"></Tab>
-                    <Tab label="Info"></Tab>
                 </Tabs>
             </Paper>
             <Container>

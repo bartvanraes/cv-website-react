@@ -24,10 +24,10 @@ export const infoOverviewReducer = (state, action) => {
                 '.net (c#)': ['.NET', 'ASP.NET', 'ASP.NET MVC', '.NET Core'],
                 'html css': ['Javascript', 'Typescript', 'ASP.NET', 'ASP.NET MVC', 'Angular', 'VueJS', 'React'],
                 'angular': ['AngularJS', 'Ngrx', 'Typescript'], // yeah yeah, I know, it's definitely not the same
-                'vue': ['VueJS', 'Vue 3', 'Javascript'],
+                'vue': ['VueJS', 'Vue 3'],
                 'databases': ['SQL Server', 'SQLAlchemy', 'Oracle', 'Firebird', 'Oracle', 'PostgreSQL', 'MySQL', 'MongoDB'],
                 'javascript': ['Angular', 'ASP.NET', 'ASP.NET MVC', 'VueJS', 'Vue 3', 'React', 'Typescript'],
-                'amazon aws': ['Docker', 'Azure'],
+                'cloud': ['Amazon AWS', 'Docker', 'Azure'],
                 'node.js': ['NodeJS', 'Express.js', 'NestJS (node.js)'],
                 'react': ['Redux', 'Context API'],
                 'java': ['Spring', 'Spring Boot', 'Thymeleaf', 'Project Lombok', 'IntelliJ IDEA', 'Mockito'],

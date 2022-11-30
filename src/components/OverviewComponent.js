@@ -13,14 +13,6 @@ const Overview = () => {
     const {skills, dispatch} = useContext(SkillContext)
     const {tab, setSelectedTab} = useContext(TabContext)
 
-    /*useEffect(() => {
-            dispatch({ type: SkillDispatchType.FILTER,  
-                skill: {
-                    name: 'vue'
-                }
-            })
-    }, [])*/
-
     const handleSubmit = e => {
         e.preventDefault()
         dispatch({ type: SkillDispatchType.FILTER,  
