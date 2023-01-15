@@ -877,6 +877,33 @@ const skillData = [
         interestLevel: SkillInterestType.INTERESTED
     },
     {
+        name: 'Next.js',
+        months: 0,
+        professional: false,
+        legacy: false,
+        handson: false,
+        category: CategoryType.PROGRAMMING_SKILL,
+        interestLevel: SkillInterestType.INTERESTED
+    },
+    {
+        name: 'React-Query',
+        months: 0,
+        professional: false,
+        legacy: false,
+        handson: false,
+        category: CategoryType.PROGRAMMING_SKILL,
+        interestLevel: SkillInterestType.INTERESTED
+    },
+    {
+        name: 'Fastify',
+        months: 0,
+        professional: false,
+        legacy: false,
+        handson: false,
+        category: CategoryType.PROGRAMMING_SKILL,
+        interestLevel: SkillInterestType.INTERESTED
+    },
+    {
         name: 'Laravel',
         months: 0,
         professional: false,

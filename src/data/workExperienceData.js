@@ -1,3 +1,6 @@
+import ProjectManagementType from 'enums/ProjectManagementType'
+import TeamSizeType from 'enums/TeamSizeType'
+
 const workExerperienceData = [
     {
         company: 'Pionira',
@@ -16,6 +19,8 @@ const workExerperienceData = [
         • Agile development with Devops`,
         projects: `• Development of a visit registration app to send and confirm invitations.
         • Development of multiple microservices in .NET Core.`,
+        projectManagement: ProjectManagementType.AGILE_SCRUM,
+        teamSize: TeamSizeType.SMALL,
         skills: ['.NET', 'Angular', 'ASP.NET MVC', '.NET Core', 'Entity Framework', 'Dapper', 'SQL Server', 'Devops', 'Azure', 'TypeScript', 'Ngrx', 'Xamarin', 'Electron', 'Formly']
     },
     {
@@ -33,6 +38,8 @@ const workExerperienceData = [
         • Hosting docker containers in Amazon AWS`,
         projects: `• Setting up the communication between our ordering system and multiple 3d printing supplier APIs so our orders could get printed automatically.
         • Development of a material service so we could link our internal materials to 3d printing materials and finishes from suppliers.`,
+        projectManagement: ProjectManagementType.AGILE_SCRUM,
+        teamSize: TeamSizeType.SMALL,
         skills: ['Angular', 'NestJS (node.js)', 'NodeJS', 'MongoDB', 'Docker', 'Amazon AWS', 'TypeScript', 'Ngrx', 'Jest', 'UML Design']
     },
     {
@@ -51,6 +58,8 @@ const workExerperienceData = [
         projects: `• Creating a working prototype to present to the clients
         • Setup of new projects in Vue and .NET Core
         • Security with Identity Server`,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.MEDIUM,
         skills: ['.NET', 'Vue', 'Vuex', '.NET Core', 'Identity Server', 'OpenLayers', 'Vuetify', 'MapGuide', 'PostgreSQL', 'Dapper', 'Entity Framework']
     },
     {
@@ -69,6 +78,8 @@ const workExerperienceData = [
         projects: `• Refactoring of the annotation system which is used to analyse movie scripts
         • Development of numerous pages and their backend logic such as a page to position the movie script on a graph between other movies based on the predicted chance that it will receive an award.
         • The app is used by top tier movie productions companies in Hollywood`,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.SMALL,
         skills: ['Python', 'Angular', 'D3.js', 'SQLAlchemy', 'MySQL']
     },
     {
@@ -86,6 +97,8 @@ const workExerperienceData = [
         • Writing unit- and integration tests
         • Bugfixing`,
         projects: `• Setting up a new project in Angular 2`,
+        projectManagement: ProjectManagementType.AGILE_SCRUM,
+        teamSize: TeamSizeType.MEDIUM,
         skills: ['.NET', 'Angular', 'ASP.NET MVC', 'WPF', 'jQuery', 'nHibernate']
     },
     {
@@ -106,6 +119,8 @@ const workExerperienceData = [
         projects: `• Farmad: Development of a prototype of their new application for the Farma 2014 expo
         • Kenze: Front end development in ASP.NET MVC for a project about parking spots
         • BPM Software: Development in AngularJS of a room rental application`,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.SMALL,
         skills: ['.NET', 'AngularJS', 'ASP.NET MVC', 'WPF', 'jQuery', 'Entity Framework', 'Kendo-ui', 'Rest API', 'DevExpress Controls', 'DevExpress XPO', 'Firebird']
     },
     {
@@ -122,6 +137,8 @@ const workExerperienceData = [
         • Writing unit-, acceptation- and UI tests in nUnit, Specflow and Gherkin
         • Creating technical analysis documentation`,
         projects: 'Mobiguider, a big project for Prodata and De Lijn',
+        projectManagement: ProjectManagementType.WATERFALL,
+        teamSize: TeamSizeType.MEDIUM,
         skills: ['.NET', 'WPF', 'nUnit', 'Oracle', 'SQL Server', 'UML Design', 'SpecFlow', 'Gherkin']
     },
     {
@@ -139,6 +156,8 @@ const workExerperienceData = [
         • New functionality is developed in C# (.NET 3.5) based on User Stories created by the analists
         • Writing Unit tests in MS Test, bugfixing and managing test data for the test team.`,
         projects: 'ULNV',
+        projectManagement: ProjectManagementType.AGILE_SCRUM,
+        teamSize: TeamSizeType.MEDIUM,
         skills: ['.NET', 'ASP.NET', 'Javascript', 'SQL Server', 'jQuery']
     },
     {
@@ -156,6 +175,8 @@ const workExerperienceData = [
         • Creating new websites with Kentico CMS`,
         projects: `• RentInParis
         • A project for 'De Orde van Franstalige Advocaten'`,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.SMALL,
         skills: ['.NET', 'ASP.NET MVC', 'nHibernate', 'LINQ', 'jQuery', 'Visual Studio', 'SQL Server', 'Kentico CMS', 'Redgate SQL Compare', 'nUnit']
     },
     {
@@ -174,6 +195,8 @@ const workExerperienceData = [
         • Wrote technical documentation about the developed modules.
         • Bugfixing`,
         projects: `SocioCultureel`,
+        projectManagement: ProjectManagementType.WATERFALL,
+        teamSize: TeamSizeType.LARGE,
         skills: ['.NET', 'Winforms', 'Visual Studio']
     },
     {
@@ -190,6 +213,8 @@ const workExerperienceData = [
         projects: `• a webservice to geocode addresses
         • a webservice to request NIS data from specific regions in Belgium
         • a project for De Post to find the best locations to open new stores.`,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.SMALL,
         skills: ['.NET', 'ASP.NET', 'SQL Server']
     },
     {
@@ -205,6 +230,8 @@ const workExerperienceData = [
         responsibilities: `.NET Development and maintenance of multiple smaller projects`,
         projects: `• Close The Gap
         • Project for Honda`,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.SMALL,
         skills: ['.NET', 'ASP.NET', 'Winforms', 'nHibernate']
     },
     {
@@ -222,6 +249,8 @@ const workExerperienceData = [
         • Bugfixing in VBScript
         • C# Development (rarely)`,
         projects: 'Remus',
+        projectManagement: ProjectManagementType.WATERFALL,
+        teamSize: TeamSizeType.MEDIUM,
         skills: ['Mercury Loadrunner', 'VBScript']
     },
     {
@@ -239,6 +268,8 @@ const workExerperienceData = [
         Cap Gemini was going to do the actual implementation based on our models.
         • Release Manager: I had the responsibility of the last 3 releases.`,
         projects: `Rabobank`,
+        projectManagement: ProjectManagementType.WATERFALL,
+        teamSize: TeamSizeType.MEDIUM,
         skills: ['UML Design', 'Rational Rose', 'SourceSafe']
     },
     {
@@ -257,6 +288,8 @@ const workExerperienceData = [
         • Creating reports in Oracle Reports
         • Testing`,
         projects: 'MECOMS',
+        projectManagement: ProjectManagementType.WATERFALL,
+        teamSize: TeamSizeType.MEDIUM,
         skills: ['Oracle', 'TOAD', 'PL/SQL']
     }
 ]

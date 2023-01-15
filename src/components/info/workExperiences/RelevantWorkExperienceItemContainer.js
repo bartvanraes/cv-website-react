@@ -5,9 +5,9 @@ import Box from '@material-ui/core/Box'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-
 import { makeStyles } from '@material-ui/core'
 import formatCompanyName from 'helpers/formatCompanyName'
+import { showTechnologies, showTeamSize, renderProjectManagement } from 'components/shared/workExperienceRenderer'
 
 const useStyles = makeStyles(theme => ({
     typeographyStyleTitle: {
@@ -29,12 +29,11 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const showTechnologies = techList => {
-    return techList.join(', ')
-}
 
 function RelevantWorkExperienceContainer(props) {
     const classes = useStyles()
+    let projectManagement = renderProjectManagement(props.item.projectManagement, classes)
+
     return (
         <Card onClick={props.toggleExpand} className={classes.cardStyle} elevation={3}>
             <CardContent>
@@ -81,6 +80,14 @@ function RelevantWorkExperienceContainer(props) {
                     </Typography>
                     <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
                         {showTechnologies(props.item.skills)}
+                    </Typography>
+                    {projectManagement}
+                    <br />
+                    <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
+                        Team Size
+                    </Typography>
+                    <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
+                        {showTeamSize(props.item.teamSize)}
                     </Typography>
                 </Box>
             </CardContent>

@@ -6,12 +6,8 @@ import Grid from '@material-ui/core/Grid'
 import formatDate from 'helpers/formatDate'
 import { makeStyles } from '@material-ui/core'
 import formatCompanyName from 'helpers/formatCompanyName'
+import { showTechnologies, showTeamSize, renderProjectManagement } from 'components/shared/workExperienceRenderer'
 
-
-
-const showTechnologies = techList => {
-    return techList.join(', ')
-}
 
 const useStyles = makeStyles(theme => ({
     typeographyStyleTitle: {
@@ -30,6 +26,8 @@ const useStyles = makeStyles(theme => ({
 
 function WorkExperienceItemContainer(props) {
     const classes = useStyles()
+    let projectManagement = renderProjectManagement(props.item.projectManagement, classes)    
+
     return (
         <Card className={classes.cardStyle} elevation={3}>
             <CardContent>
@@ -71,6 +69,14 @@ function WorkExperienceItemContainer(props) {
                 </Typography>
                 <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
                     {showTechnologies(props.item.skills)}
+                </Typography>
+                {projectManagement}
+                <br />
+                <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
+                    Team Size
+                </Typography>
+                <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
+                    {showTeamSize(props.item.teamSize)}
                 </Typography>
             </CardContent>
         </Card>
