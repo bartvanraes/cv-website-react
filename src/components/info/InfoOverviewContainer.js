@@ -7,6 +7,7 @@ import MyLocationIcon from '@material-ui/icons/MyLocation'
 import CakeIcon from '@material-ui/icons/Cake';
 import EuroSymbolIcon from '@material-ui/icons/EuroSymbol';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
+import EventAvailableIcon from '@material-ui/icons/EventAvailable';
 import RelevantWorkExperienceOverview from './workExperiences/RelevantWorkExperienceOverviewComponent'
 import RelevantSkillOverview from './skills/RelevantSkillOverviewComponent'
 import clsx from 'clsx'
@@ -251,7 +252,16 @@ function InfoOverviewContainer(props) {
                                 className={classes.contactItemStyle}>
                                     <EuroSymbolIcon color="secondary" className={classes.iconStyle}></EuroSymbolIcon>
                                     <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                        Employee (unemployed)
+                                        Employee
+                                </Typography>
+                            </Grid>
+                            <Grid
+                                container
+                                spacing={3}
+                                className={classes.contactItemStyle}>
+                                    <EventAvailableIcon color="secondary" className={classes.iconStyle}></EventAvailableIcon>
+                                    <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
+                                        In a VDAB career guidance traject<br /> Not available for projects
                                 </Typography>
                             </Grid>               
                         </Grid>
