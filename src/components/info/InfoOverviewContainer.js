@@ -261,7 +261,7 @@ function InfoOverviewContainer(props) {
                                 className={classes.contactItemStyle}>
                                     <EventAvailableIcon color="secondary" className={classes.iconStyle}></EventAvailableIcon>
                                     <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                        In a VDAB career guidance traject<br /> Not available for projects
+                                        In a VDAB career guidance program<br /> Not available for projects
                                 </Typography>
                             </Grid>               
                         </Grid>

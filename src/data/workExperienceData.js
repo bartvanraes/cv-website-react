@@ -3,6 +3,22 @@ import TeamSizeType from 'enums/TeamSizeType'
 
 const workExerperienceData = [
     {
+        company: 'VDAB',
+        location: 'Antwerp',
+        position: 'Career guidance program',
+        startDate: '06/12/2022',
+        endDate: null,
+        temporary: false,
+        consultancy: false,
+        quit: false,
+        outline: 'Following a career guidance program of the VDAB',
+        responsibilities: ``,
+        projects: ``,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.SOLO,
+        skills: []
+    },
+    {
         company: 'Pionira',
         location: 'Remote/Zeebrugge',
         position: 'Angular/.NET Core Developer',
