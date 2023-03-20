@@ -1,5 +1,5 @@
 import SkillItemContainer from './SkillItemContainer'
-import './SkillItemComponent.css'
+//import './SkillItemComponent.css'
 
 const SkillItem = (props) => {
     return SkillItemContainer(props)

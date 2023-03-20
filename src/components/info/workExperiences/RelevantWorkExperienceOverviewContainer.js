@@ -1,28 +1,24 @@
 import React from 'react'
-import { Grid, makeStyles } from '@material-ui/core'
+import { Grid } from '@mui/material'
 import RelevantWorkExperienceItem from './RelevantWorkExperienceItemComponent'
+import { ThemeProvider } from '@mui/material/styles'
+import theme from '@/themes/cvTheme'
 
-const useStyles = makeStyles(theme => ({
-    relevantWorkExperienceItemStyle: {
-        
-    },
-    containerStyle: {
-        marginBottom: theme.spacing(2)
-    }
-}))
-
-const showWorkExperiences = (workExperiences, classes) => {
+const showWorkExperiences = (workExperiences) => {
     return workExperiences.map((work) => <Grid item xs={12} key={work.startDate}>
-                                            <RelevantWorkExperienceItem key={work.startDate} item={work} className={classes.relevantWorkExperienceItemStyle}>
+                                            <RelevantWorkExperienceItem key={work.startDate} item={work}>
                                         </RelevantWorkExperienceItem></Grid>)
 }
 
 function RelevantWorkExperienceOverviewContainer(props) {
-    const classes = useStyles()
     return (
-        <Grid container spacing={3} className={classes.containerStyle}> 
-            {showWorkExperiences(props.infoOverview.relevantWorkExperiences, classes)}
-        </Grid>
+        <ThemeProvider theme={theme}>
+            <Grid container spacing={3} sx={{
+                marginBottom: theme.spacing(2)
+            }}> 
+                {showWorkExperiences(props.infoOverview.relevantWorkExperiences)}
+            </Grid>
+        </ThemeProvider>
     )
 }
 

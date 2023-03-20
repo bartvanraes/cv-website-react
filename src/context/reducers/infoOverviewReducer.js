@@ -1,4 +1,4 @@
-import InfoOverviewDispatchType from 'enums/InfoOverviewDispatchType'
+import InfoOverviewDispatchType from '@/enums/InfoOverviewDispatchType'
 
 export const infoOverviewReducer = (state, action) => {
     

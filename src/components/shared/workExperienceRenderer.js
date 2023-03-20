@@ -1,7 +1,7 @@
 import React from 'react'
-import ProjectManagementType from 'enums/ProjectManagementType'
-import Typography from '@material-ui/core/Typography'
-import TeamSizeType from 'enums/TeamSizeType'
+import ProjectManagementType from '@/enums/ProjectManagementType'
+import Typography from '@mui/material/Typography'
+import TeamSizeType from '@/enums/TeamSizeType'
 
 const showTechnologies = techList => {
     return techList.join(', ')
@@ -20,17 +20,27 @@ const showProjectManagement = (projectManagement) => {
     }
 }
 
-const renderProjectManagement = (projectManagement, classes) => {
+const renderProjectManagement = (projectManagement, theme) => {
     if (projectManagement && projectManagement !== ProjectManagementType.NONE) {
-        return <div>
-            <br />
-            <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
-                Project Management
-            </Typography>
-            <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
-            {showProjectManagement(projectManagement)}
-            </Typography>
-        </div>
+        return (
+            <div>
+                <br />
+                <Typography color="textSecondary" variant="subtitle1" sx={{
+                    paddingLeft: theme.spacing(1),
+                    paddingRight: theme.spacing(2)
+                }}>
+                    Project Management
+                </Typography>
+                <Typography variant="subtitle1" sx={{
+                    paddingLeft: theme.spacing(2),
+                    paddingRight: theme.spacing(2),
+                    whiteSpace: 'pre-line'
+                }}>
+                {showProjectManagement(projectManagement)}
+                </Typography>
+            </div>
+        )
+        
     }
 
     return null

@@ -1,4 +1,4 @@
-import WorkExperienceDispatchType from 'enums/WorkExperienceDispatchType'
+import WorkExperienceDispatchType from '@/enums/WorkExperienceDispatchType'
 
 export const workExperienceReducer = (state, action) => {
     

@@ -1,11 +1,11 @@
 import {useContext} from 'react'
-import { WorkExperienceContext } from 'context/WorkExperienceContext'
-import { SkillContext } from 'context/SkillContext'
-import { TabContext } from 'context/TabContext'
+import { WorkExperienceContext } from '@/context/WorkExperienceContext'
+import { SkillContext } from '@/context/SkillContext'
+import { TabContext } from '@/context/TabContext'
 import OverviewContainer from './OverviewContainer'
-import CategoryType from 'enums/CategoryType'
-import SkillDispatchType from 'enums/SkillDispatchType'
-import './OverviewComponent.css'
+import CategoryType from '@/enums/CategoryType'
+import SkillDispatchType from '@/enums/SkillDispatchType'
+//import styles from './OverviewComponent.css'
 
 const Overview = () => {
     

@@ -1,74 +1,20 @@
 import React from 'react'
-import { Grid, Typography, Box, Button, Link, makeStyles } from '@material-ui/core'
-import PhoneIcon from '@material-ui/icons/Phone'
-import EmailIcon from '@material-ui/icons/Email'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import MyLocationIcon from '@material-ui/icons/MyLocation'
-import CakeIcon from '@material-ui/icons/Cake';
-import EuroSymbolIcon from '@material-ui/icons/EuroSymbol';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
-import EventAvailableIcon from '@material-ui/icons/EventAvailable';
+import { Grid, Typography, Box, Button, Link } from '@mui/material'
+import PhoneIcon from '@mui/icons-material/Phone'
+import EmailIcon from '@mui/icons-material/Email'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import MyLocationIcon from '@mui/icons-material/MyLocation'
+import CakeIcon from '@mui/icons-material/Cake'
+import EuroSymbolIcon from '@mui/icons-material/EuroSymbol'
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
+import EventAvailableIcon from '@mui/icons-material/EventAvailable'
 import RelevantWorkExperienceOverview from './workExperiences/RelevantWorkExperienceOverviewComponent'
 import RelevantSkillOverview from './skills/RelevantSkillOverviewComponent'
-import clsx from 'clsx'
-
-const useStyles = makeStyles((theme) => ({
-    iconStyle: {
-        paddingRight: theme.spacing(2)
-    },
-    contactTextStyle: {
-        
-    },
-    contactItemStyle: {
-        marginLeft: theme.spacing(2),
-        marginTop: theme.spacing(3)
-    },
-    contactItemStyleRight: {
-        marginTop: theme.spacing(3)
-    },
-    contactSectionStyle: {
-        marginBottom: theme.spacing(2)
-    },
-    skillBoxStyle: {
-        marginLeft: theme.spacing(2),
-        marginTop: theme.spacing(2),
-        background: theme.palette.background.default
-    },
-    skillStyle: {
-        background: theme.palette.background.default,
-        '&:hover': {
-            background: '#c7cbd1'
-        },
-        marginBottom: theme.spacing(1),
-        cursor: 'pointer'
-    },
-    highlightedSkillStyle: {
-        background: '#dde2eb'
-    },
-    showMoreStyle: {
-        marginLeft: theme.spacing(1)
-    },
-    experienceTitleStyle: {
-        marginBottom: theme.spacing(2)
-    },
-    subtitleStyle: {
-        marginBottom: theme.spacing(2)
-    },
-    eductionSchoolStyle: {
-        marginLeft: theme.spacing(2)
-    },
-    educationPeriodStyle: {
-        marginLeft: theme.spacing(3)
-    },
-    eductationContentStyle: {
-        marginTop: theme.spacing(1),
-        marginLeft: theme.spacing(3)
-    }
-
-}))
+import { ThemeProvider } from '@mui/material/styles'
+import theme from '@/themes/cvTheme'
 
 
-const showSkill = (props, name, rating, classes) => {
+const showSkill = (props, name, rating, theme) => {
     let dots = []
     for (let i = 1; i <= 5; i++) {
         if (i <= rating) {
@@ -79,19 +25,29 @@ const showSkill = (props, name, rating, classes) => {
         }        
     }
 
-    let combinedSkillStyle = clsx(
-        classes.skillStyle
-    )
+    let combinedSkillStyle = {
+        background: theme.palette.background.default,
+        '&:hover': {
+            background: '#c7cbd1'
+        },
+        padding: theme.spacing(1.5),
+        cursor: 'pointer'
+    }
 
     if (props.infoOverview.selectedGeneralSkill.toLowerCase() === name.toLowerCase()) {
-        combinedSkillStyle = clsx(
-            classes.skillStyle,
-            classes.highlightedSkillStyle
-        )
+        combinedSkillStyle = {
+            background: theme.palette.background.default,
+            '&:hover': {
+                background: '#c7cbd1'
+            },
+            padding: theme.spacing(1.5),
+            cursor: 'pointer',
+            background: '#dde2eb'
+        }
     }
-    
+   
     return (
-        <Grid container spacing={3} key={name} className={combinedSkillStyle} onClick={(e) => props.handleGeneralSkillSelect(e, name)}>
+        <Grid container spacing={0} key={name} sx={combinedSkillStyle} onClick={(e) => props.handleGeneralSkillSelect(e, name)}>           
             <Grid item xs={6} md={7}>
             {name}
             </Grid>
@@ -102,7 +58,7 @@ const showSkill = (props, name, rating, classes) => {
     )
 }
 
-const showRelevantExperiences = (props, classes) => {
+const showRelevantExperiences = (props, theme) => {
     if (props.infoOverview.relevantWorkExperiences.length === 0) {
         return
     }
@@ -112,7 +68,9 @@ const showRelevantExperiences = (props, classes) => {
             <Typography color="textSecondary" variant="h4">
                 {props.infoOverview.selectedGeneralSkill === '' ? 'RECENT EXPERIENCE' : 'RELEVANT EXPERIENCE'}
             </Typography>
-            <Typography variant="body2" color="textPrimary" className={classes.experienceTitleStyle}>
+            <Typography variant="body2" color="textPrimary" sx={{
+                marginBottom: theme.spacing(2)
+                }}>
                 (select a work experience to see more details)
             </Typography>
             <RelevantWorkExperienceOverview></RelevantWorkExperienceOverview>
@@ -120,14 +78,16 @@ const showRelevantExperiences = (props, classes) => {
     )    
 }
 
-const showRelevantSkills = (props, classes) => {
+const showRelevantSkills = (props, theme) => {
     if (props.infoOverview.relevantSkills.length === 0) {
         return
     }
 
     return (
         <Box>
-            <Typography color="textSecondary" variant="h4" className={classes.experienceTitleStyle}>
+            <Typography color="textSecondary" variant="h4" sx={{
+                marginBottom: theme.spacing(2)
+                }}>
                 RELEVANT SKILLS
             </Typography>
             <RelevantSkillOverview></RelevantSkillOverview>
@@ -137,175 +97,243 @@ const showRelevantSkills = (props, classes) => {
 }
 
 function InfoOverviewContainer(props) {
-    const classes = useStyles(props)    
     return (
-        <div>
-            <Grid container spacing={3}>
-                <Grid item xs={12} md={6}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={11} md={11}>
-                            <Typography color="textSecondary" variant="h4" className={classes.subtitleStyle}>
-                                PROFILE
-                            </Typography>
-                            <Typography color="textPrimary" variant="body1">
-                                Over 13 years of experience as a
-                                software engineer/analyst, both in
-                                consultancy and in-house
-                                development.
-                            </Typography>
-                            <Typography color="textPrimary" variant="body1">                            
-                                Constantly improving my software
-                                development skills and keeping up
-                                to date with the latest trends.
-                                Always aiming for the highest
-                                quality.
-                            </Typography>
-                            <br />
-                            <Typography color="textPrimary" variant="body1">
-                                This site was developed in React (
-                                    <Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>
-                                    ), feel free to click on the skills to see the relevant work experiences and years of experience that I have in them.
-                            </Typography>                            
-                        </Grid>
-               
+        <ThemeProvider theme={theme}>
+            <div>
+                <Grid container spacing={3}>
+                    <Grid item xs={12} md={6}>
+                        <Grid container spacing={3}>
+                            <Grid item xs={11} md={11}>
+                                <Typography color="textSecondary" variant="h4" sx={{
+                                    marginBottom: theme.spacing(2)
+                                }}>
+                                    PROFILE
+                                </Typography>
+                                <Typography color="textPrimary" variant="body1">
+                                    Over 13 years of experience as a
+                                    software engineer/analyst, both in
+                                    consultancy and in-house
+                                    development.
+                                </Typography>
+                                <Typography color="textPrimary" variant="body1">                            
+                                    Constantly improving my software
+                                    development skills and keeping up
+                                    to date with the latest trends.
+                                    Always aiming for the highest
+                                    quality.
+                                </Typography>
+                                <br />
+                                <Typography color="textPrimary" variant="body1">
+                                    This site was developed in React (
+                                        <Link href="https://github.com/bartvanraes/cv-website-react" target="_blank" rel="noopener" color="textPrimary" variant="body1">Github</Link>
+                                        ), feel free to click on the skills to see the relevant work experiences and years of experience that I have in them.
+                                </Typography>                            
+                            </Grid>
                 
-                        <Grid item xs={12} md={8}>
-                            <Typography color="textSecondary" variant="h4">
-                                SKILLS
-                            </Typography>
-                            <Typography variant="body2" color="textPrimary">
-                                (select a skill to see related experience)
-                            </Typography>
-                            <Box className={classes.skillBoxStyle}>
-                                {showSkill(props, '.NET (C#)', 4, classes)}
-                                {showSkill(props, 'HTML CSS', 4, classes)}
-                                {showSkill(props, 'Angular', 4, classes)}
-                                {showSkill(props, 'Vue', 3, classes)}
-                                {showSkill(props, 'Databases', 4, classes)}
-                                {showSkill(props, 'Javascript', 4, classes)}
-                                
-                                
-                                <Box hidden={!props.infoOverview.showMoreSkills}>
-                                    {showSkill(props, 'Cloud', 2, classes)}
-                                    {showSkill(props, 'Node.js', 2, classes)}
-                                    {showSkill(props, 'React', 2, classes)}
-                                    {showSkill(props, 'Java', 1, classes)}
-                                    {showSkill(props, 'Python', 1, classes)}
-                                    {showSkill(props, 'UML Design', 2, classes)}
-                                </Box>                        
-                            </Box>
-                            <Button onClick={props.toggleSkills} className={classes.showMoreStyle}>{ props.infoOverview.showMoreSkills ? 'Show Less' : 'Show More'}</Button>
-                        </Grid>
+                    
+                            <Grid item xs={12} md={8}>
+                                <Typography color="textSecondary" variant="h4">
+                                    SKILLS
+                                </Typography>
+                                <Typography variant="body2" color="textPrimary">
+                                    (select a skill to see related experience)
+                                </Typography>
+                                <Box sx={{
+                                    marginLeft: theme.spacing(2),
+                                    marginTop: theme.spacing(2),
+                                    background: theme.palette.background.default
+                                }}>
+                                    {showSkill(props, '.NET (C#)', 4, theme)}
+                                    {showSkill(props, 'HTML CSS', 4, theme)}
+                                    {showSkill(props, 'Angular', 4, theme)}
+                                    {showSkill(props, 'Vue', 3, theme)}
+                                    {showSkill(props, 'Databases', 4, theme)}
+                                    {showSkill(props, 'Javascript', 4, theme)}
+                                    
+                                    
+                                    <Box hidden={!props.infoOverview.showMoreSkills}>
+                                        {showSkill(props, 'Cloud', 2, theme)}
+                                        {showSkill(props, 'Node.js', 2, theme)}
+                                        {showSkill(props, 'React', 2, theme)}
+                                        {showSkill(props, 'Java', 1, theme)}
+                                        {showSkill(props, 'Python', 1, theme)}
+                                        {showSkill(props, 'UML Design', 2, theme)}
+                                    </Box>                        
+                                </Box>
+                                <Button onClick={props.toggleSkills} sx={{
+                                    marginLeft: theme.spacing(1)
+                                }}>{ props.infoOverview.showMoreSkills ? 'Show Less' : 'Show More'}</Button>
+                            </Grid>
 
-                        <Grid item xs={12} md={12} className={classes.contactSectionStyle}>
-                            <Typography color="textSecondary" variant="h4">
-                                CONTACT
-                            </Typography>
-                            <Grid 
-                                container                        
-                                spacing={3}
-                                className={classes.contactItemStyle}>
-                                <PhoneIcon color="secondary" className={classes.iconStyle}></PhoneIcon>
-                                <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                    +32 497 631450
+                            <Grid item xs={12} md={12} sx={{
+                                    marginBottom: theme.spacing(2)
+                                }}>
+                                <Typography color="textSecondary" variant="h4">
+                                    CONTACT
+                                </Typography>
+                                <Grid 
+                                    container                        
+                                    spacing={3}
+                                    sx={{
+                                        marginLeft: theme.spacing(2),
+                                        marginTop: theme.spacing(3)
+                                    }}>
+                                    <PhoneIcon color="secondary" sx={{
+                                        paddingRight: theme.spacing(2)
+                                    }}></PhoneIcon>
+                                    <Typography color="textPrimary" variant="body1">
+                                        +32 497 631450
+                                    </Typography>
+                                </Grid>
+                                <Grid 
+                                    container                        
+                                    spacing={3}
+                                    sx={{
+                                        marginLeft: theme.spacing(2),
+                                        marginTop: theme.spacing(3)
+                                    }}>
+                                    <EmailIcon color="secondary" sx={{
+                                        paddingRight: theme.spacing(2)
+                                    }}></EmailIcon>
+                                    <Typography color="textPrimary" variant="body1">
+                                        <Link href="mailto:bart.vanraes@gmail.com">bart.vanraes@gmail.com</Link>
+                                </Typography>
+                                </Grid>
+                                <Grid 
+                                    container                        
+                                    spacing={3}
+                                    sx={{
+                                        marginLeft: theme.spacing(2),
+                                        marginTop: theme.spacing(3)
+                                    }}>
+                                    <LinkedInIcon color="secondary" sx={{
+                                        paddingRight: theme.spacing(2)
+                                    }}></LinkedInIcon>
+                                    <Link href="https://linkedin.com/in/bart-vanraes1981" target="_blank" rel="noopener" color="textPrimary" variant="body1">
+                                        linkedin.com/in/bart-vanraes1981
+                                    </Link>
+                                </Grid>
+                                <Grid 
+                                    container                        
+                                    spacing={3}
+                                    sx={{
+                                        marginLeft: theme.spacing(2),
+                                        marginTop: theme.spacing(3)
+                                    }}>
+                                    <MyLocationIcon color="secondary" sx={{
+                                        paddingRight: theme.spacing(2)
+                                    }}></MyLocationIcon>
+                                    <Typography color="textPrimary" variant="body1">
+                                        Antwerpen
+                                    </Typography>
+                                </Grid>     
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        marginLeft: theme.spacing(2),
+                                        marginTop: theme.spacing(3)
+                                    }}>
+                                        <CakeIcon color="secondary" sx={{
+                                        paddingRight: theme.spacing(2)
+                                    }}></CakeIcon>
+                                        <Typography color="textPrimary" variant="body1">
+                                            02/07/1981
+                                    </Typography>
+                                </Grid>          
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        marginLeft: theme.spacing(2),
+                                        marginTop: theme.spacing(3)
+                                    }}>
+                                        <EuroSymbolIcon color="secondary" sx={{
+                                        paddingRight: theme.spacing(2)
+                                    }}></EuroSymbolIcon>
+                                        <Typography color="textPrimary" variant="body1">
+                                            Employee
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        marginLeft: theme.spacing(2),
+                                        marginTop: theme.spacing(3)
+                                    }}>
+                                        <EventAvailableIcon color="secondary" sx={{
+                                        paddingRight: theme.spacing(2)
+                                    }}></EventAvailableIcon>
+                                        <Typography color="textPrimary" variant="body1">
+                                            In a VDAB career guidance program<br /> Not available for projects
+                                    </Typography>
+                                </Grid>               
+                            </Grid>
+                            <Grid item xs={12} md={12}>
+                                <Typography color="textSecondary" variant="h4" sx={{
+                                    marginBottom: theme.spacing(2)
+                                }}>
+                                    EDUCATION
+                                </Typography>
+                                <Typography color="textPrimary" variant="h6" sx={{
+                                    marginLeft: theme.spacing(2)
+                                }}>
+                                    Cevora
+                                </Typography>
+                                <Typography variant="subtitle2" color="textSecondary" sx={{
+                                    marginLeft: theme.spacing(3)
+                                    }}>
+                                    SEP 2004 - DEC 2004
+                                </Typography>
+                                <Typography color="textPrimary" variant="body1" sx={{
+                                    marginTop: theme.spacing(1),
+                                    marginLeft: theme.spacing(3)
+                                }}>
+                                    .NET Development course
+                                </Typography>
+                                <br />
+                                <Typography color="textPrimary" variant="h6" sx={{
+                                    marginLeft: theme.spacing(2)
+                                }}>
+                                    KDG Hogeschool Groenplaats
+                                </Typography>
+                                <Typography variant="subtitle2" color="textSecondary" sx={{
+                                    marginLeft: theme.spacing(3)
+                                    }}>
+                                    SEP 1999 - JUN 2002
+                                </Typography>
+                                <Typography color="textPrimary" variant="body1" sx={{
+                                    marginTop: theme.spacing(1),
+                                    marginLeft: theme.spacing(3)
+                                }}>
+                                    Bachelor IT
                                 </Typography>
                             </Grid>
-                            <Grid 
-                                container                        
-                                spacing={3}
-                                className={classes.contactItemStyle}>
-                                <EmailIcon color="secondary" className={classes.iconStyle}></EmailIcon>
-                                <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                    <Link href="mailto:bart.vanraes@gmail.com">bart.vanraes@gmail.com</Link>
-                            </Typography>
-                            </Grid>
-                            <Grid 
-                                container                        
-                                spacing={3}
-                                className={classes.contactItemStyle}>
-                                <LinkedInIcon color="secondary" className={classes.iconStyle}></LinkedInIcon>
-                                <Link href="https://linkedin.com/in/bart-vanraes1981" target="_blank" rel="noopener" color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                    linkedin.com/in/bart-vanraes1981
-                                </Link>
-                            </Grid>
-                            <Grid 
-                                container                        
-                                spacing={3}
-                                className={classes.contactItemStyle}>
-                                <MyLocationIcon color="secondary" className={classes.iconStyle}></MyLocationIcon>
-                                <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                    Antwerpen
-                                </Typography>
-                            </Grid>     
-                            <Grid
-                                container
-                                spacing={3}
-                                className={classes.contactItemStyle}>
-                                    <CakeIcon color="secondary" className={classes.iconStyle}></CakeIcon>
-                                    <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                        02/07/1981
-                                </Typography>
-                            </Grid>          
-                            <Grid
-                                container
-                                spacing={3}
-                                className={classes.contactItemStyle}>
-                                    <EuroSymbolIcon color="secondary" className={classes.iconStyle}></EuroSymbolIcon>
-                                    <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                        Employee
-                                </Typography>
-                            </Grid>
-                            <Grid
-                                container
-                                spacing={3}
-                                className={classes.contactItemStyle}>
-                                    <EventAvailableIcon color="secondary" className={classes.iconStyle}></EventAvailableIcon>
-                                    <Typography color="textPrimary" variant="body1" className={classes.contactTextStyle}>
-                                        In a VDAB career guidance program<br /> Not available for projects
-                                </Typography>
-                            </Grid>               
-                        </Grid>
-                        <Grid item xs={12} md={12}>
-                            <Typography color="textSecondary" variant="h4" className={classes.subtitleStyle}>
-                                EDUCATION
-                            </Typography>
-                            <Typography color="textPrimary" variant="h6" className={classes.eductionSchoolStyle}>
-                                Cevora
-                            </Typography>
-                            <Typography variant="subtitle2" color="textSecondary" className={classes.educationPeriodStyle}>
-                                SEP 2004 - DEC 2004
-                            </Typography>
-                            <Typography color="textPrimary" variant="body1" className={classes.eductationContentStyle}>
-                                .NET Development course
-                            </Typography>
-                            <br />
-                            <Typography color="textPrimary" variant="h6" className={classes.eductionSchoolStyle}>
-                                KDG Hogeschool Groenplaats
-                            </Typography>
-                            <Typography variant="subtitle2" color="textSecondary" className={classes.educationPeriodStyle}>
-                                SEP 1999 - JUN 2002
-                            </Typography>
-                            <Typography color="textPrimary" variant="body1" className={classes.eductationContentStyle}>
-                                Bachelor IT
-                            </Typography>
                         </Grid>
                     </Grid>
+                    <Grid item xs={12} md={6}>
+                        {showRelevantExperiences(props, theme)}
+                        {showRelevantSkills(props, theme)}
+                        <Box sx={{
+                            marginTop: theme.spacing(3)
+                        }}>
+                            <Typography color="textSecondary" variant="h4" sx={{
+                                    marginBottom: theme.spacing(2)
+                                }}>
+                                HOBBIES
+                            </Typography>
+                            <Typography color="textPrimary" variant="h6" sx={{
+                                    marginLeft: theme.spacing(2)
+                                }}>
+                                Travel | Jogging | Concerts | Gaming | Social events
+                            </Typography>
+                        </Box>
+                    </Grid>                
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    {showRelevantExperiences(props, classes)}
-                    {showRelevantSkills(props, classes)}
-                    <Box className={classes.contactItemStyleRight}>
-                        <Typography color="textSecondary" variant="h4" className={classes.subtitleStyle}>
-                            HOBBIES
-                        </Typography>
-                        <Typography color="textPrimary" variant="h6" className={classes.eductionSchoolStyle}>
-                            Travel | Jogging | Concerts | Gaming | Social events
-                        </Typography>
-                    </Box>
-                </Grid>                
-            </Grid>
 
-        </div>
+            </div>
+        </ThemeProvider>
     )
 }
 

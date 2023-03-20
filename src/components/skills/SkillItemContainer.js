@@ -1,5 +1,7 @@
 import React from 'react'
-import { Card, Grid, CardContent, Typography, makeStyles } from '@material-ui/core'
+import { Card, Grid, CardContent, Typography } from '@mui/material'
+import { ThemeProvider } from '@mui/material/styles'
+import theme from '@/themes/cvTheme'
 
 function formatMonths(months) {
     if (months === 1) {
@@ -16,50 +18,38 @@ function formatMonths(months) {
     return `${(Math.round(months * 2 / 12) / 2).toLocaleString()} years`
 }
 
-const useStyles = makeStyles((theme) => ({
-    experienceGrid: {
-        marginTop: theme.spacing(0.1),
-        paddingLeft: theme.spacing(1.5),
-        paddingRight: theme.spacing(1),
-        alignItems: 'baseline'
-
-    }
-}))
-
 function SkillItemContainer(props) {
-    const classes = useStyles()
+
     return (
-        <Card elevation={3}>
-            <CardContent>
-                <Typography>
-                    {props.item.name}
-                </Typography>
-                { props.item.months > 0 ? 
-                    <Grid 
-                    container 
-                    justify="flex-start" 
-                    spacing={3}
-                    className={classes.experienceGrid}> 
-                        <Typography variant="subtitle2" color="textSecondary">
-                            Experience:
-                        </Typography>
-                        &nbsp;
-                        <Typography variant="subtitle2" color="textSecondary">
-                            {formatMonths(props.item.months)}
-                        </Typography> 
-                    </Grid>
-                    : 
-                    <Grid 
-                    container 
-                    justify="flex-start" 
-                    spacing={3}
-                    className={classes.experienceGrid}> 
-                        <Typography variant="subtitle2" color="textSecondary">
-                            { props.item.handson ? 'Practical experience' : 'Self taught' }    
-                        </Typography>
-                    </Grid>}
-            </CardContent>
-        </Card>
+        <ThemeProvider theme={theme}>
+            <Card elevation={3}>
+                <CardContent>
+                    <Typography>
+                        {props.item.name}
+                    </Typography>
+                    { props.item.months > 0 ? 
+                        <Grid 
+                        container 
+                        justify="flex-start"> 
+                            <Typography variant="subtitle2" color="textSecondary">
+                                Experience:
+                            </Typography>
+                            &nbsp;
+                            <Typography variant="subtitle2" color="textSecondary">
+                                {formatMonths(props.item.months)}
+                            </Typography> 
+                        </Grid>
+                        : 
+                        <Grid 
+                        container 
+                        justify="flex-start"> 
+                            <Typography variant="subtitle2" color="textSecondary">
+                                { props.item.handson ? 'Practical experience' : 'Self taught' }    
+                            </Typography>
+                        </Grid>}
+                </CardContent>
+            </Card>
+        </ThemeProvider>
     )
 }
 

@@ -1,5 +1,5 @@
 import FAQOverviewContainer from "./FAQOverviewContainer"
-import './FAQOverviewComponent.css'
+//import styles from './FAQOverviewComponent.css'
 
 const FAQOverview = () => {
     return FAQOverviewContainer()

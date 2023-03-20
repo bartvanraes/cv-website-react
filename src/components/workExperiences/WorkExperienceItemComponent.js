@@ -1,5 +1,5 @@
 import WorkExperienceItemContainer from './WorkExperienceItemContainer'
-import './WorkExperienceItemComponent.css'
+//import './WorkExperienceItemComponent.css'
 
 const WorkExperienceItem = (props) => {
     return WorkExperienceItemContainer(props)

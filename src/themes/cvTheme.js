@@ -1,5 +1,6 @@
-import { createMuiTheme } from '@material-ui/core/styles'
-const cvTheme = createMuiTheme({
+import { createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
     typography: {
         fontFamily: [
             'Montserrat-Medium',
@@ -17,7 +18,7 @@ const cvTheme = createMuiTheme({
         },
         text: {
             primary: '#3e6b89',
-            secondary: '#3dd2cc',
+            secondary: '#3dd2cc'
         },
         background: {
             default: '#f5f5f5',
@@ -26,45 +27,51 @@ const cvTheme = createMuiTheme({
             }
         }
     },
-    overrides: {
+    components: {
         MuiInput: {
-          input: {
-            "&::placeholder": {
-              color: "gray"
-            },
-            color: '#3e6b89', // if you also want to change the color of the input, this is the prop you'd use
-          }
+            styleOverrides: {
+                input: {
+                "&::placeholder": {
+                    color: "gray"
+                },
+                color: '#3e6b89', // if you also want to change the color of the input, this is the prop you'd use
+                }
+            }
         },
         MuiFormLabel: { 
-            root: { 
-                color: '#3e6b89' 
+            styleOverrides: {
+                root: { 
+                    color: '#3e6b89' 
+                }
             }
         },
         MuiTabs: {
-            indicator: {
-                background: '#3e6b89'
-            },
-            root: {
-                background: '#DEF7F7',                
+            styleOverrides: {
+                indicator: {
+                    background: '#3e6b89'
+                },
+                root: {
+                    background: '#DEF7F7'
+                }
             }
-        }       
-    }
+        }
+    }     
 })
 
-cvTheme.typography.h4 = {
-    ...cvTheme.typography.h4,
+theme.typography.h4 = {
+    ...theme.typography.h4,
     fontSize: '1.6rem',
-    [cvTheme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('md')]: {
         fontSize: '2.125rem',
         },
 }
 
-cvTheme.typography.h5 = {
-    ...cvTheme.typography.h5,
+theme.typography.h5 = {
+    ...theme.typography.h5,
     fontSize: '1.5rem',
-    [cvTheme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('md')]: {
         fontSize: '1.5rem',
         },
 }
 
-export default cvTheme
+export default theme

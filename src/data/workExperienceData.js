@@ -1,5 +1,5 @@
-import ProjectManagementType from 'enums/ProjectManagementType'
-import TeamSizeType from 'enums/TeamSizeType'
+import ProjectManagementType from '@/enums/ProjectManagementType'
+import TeamSizeType from '@/enums/TeamSizeType'
 
 const workExerperienceData = [
     {

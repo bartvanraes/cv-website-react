@@ -1,97 +1,123 @@
 import React from 'react'
-import formatDate from 'helpers/formatDate'
-import Card from '@material-ui/core/Card'
-import Box from '@material-ui/core/Box'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid'
-import { makeStyles } from '@material-ui/core'
-import formatCompanyName from 'helpers/formatCompanyName'
-import { showTechnologies, showTeamSize, renderProjectManagement } from 'components/shared/workExperienceRenderer'
-
-const useStyles = makeStyles(theme => ({
-    typeographyStyleTitle: {
-        paddingLeft: theme.spacing(1),
-        paddingRight: theme.spacing(2)
-    },
-    typeographyStyleParagraph: {
-        paddingLeft: theme.spacing(2),
-        paddingRight: theme.spacing(2),
-        whiteSpace: 'pre-line'
-    },
-    typeographyStyleParagraphTitle: {
-        paddingLeft: theme.spacing(1),
-        paddingRight: theme.spacing(2),
-        whiteSpace: 'pre-line'
-    },
-    cardStyle: {
-        cursor: 'pointer'
-    }
-}))
-
+import formatDate from '@/helpers/formatDate'
+import Card from '@mui/material/Card'
+import Box from '@mui/material/Box'
+import CardContent from '@mui/material/CardContent'
+import Typography from '@mui/material/Typography'
+import Grid from '@mui/material/Grid'
+import formatCompanyName from '@/helpers/formatCompanyName'
+import { showTechnologies, showTeamSize, renderProjectManagement } from '@/components/shared/workExperienceRenderer'
+import { ThemeProvider } from '@mui/material/styles'
+import theme from '@/themes/cvTheme'
 
 function RelevantWorkExperienceContainer(props) {
-    const classes = useStyles()
-    let projectManagement = renderProjectManagement(props.item.projectManagement, classes)
+    let projectManagement = renderProjectManagement(props.item.projectManagement, theme)
 
     return (
-        <Card onClick={props.toggleExpand} className={classes.cardStyle} elevation={3}>
-            <CardContent>
-                <Grid 
-                    container
-                    justify="space-between" 
-                    > 
-                    <Grid item xs={12} md={12}>
-                        <Typography variant="h5" className={classes.typeographyStyleParagraphTitle}>
-                            {props.item.position} - {formatCompanyName(props.item)}
-                        </Typography>
+        <ThemeProvider theme={theme}>
+            <Card onClick={props.toggleExpand} sx={{
+                cursor: 'pointer'
+            }} elevation={3}>
+                <CardContent>
+                    <Grid 
+                        container
+                        justify="space-between" 
+                        > 
+                        <Grid item xs={12} md={12}>
+                            <Typography variant="h5" sx={{
+                                paddingLeft: theme.spacing(1),
+                                paddingRight: theme.spacing(2),
+                                whiteSpace: 'pre-line'
+                            }}>
+                                {props.item.position} - {formatCompanyName(props.item)}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                            <Typography color="textSecondary" sx={{
+                                paddingLeft: theme.spacing(1),
+                                paddingRight: theme.spacing(2),
+                                whiteSpace: 'pre-line'
+                            }}>
+                                {formatDate(props.item.startDate)} - {formatDate(props.item.endDate)}
+                            </Typography>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} md={12}>
-                        <Typography color="textSecondary" className={classes.typeographyStyleParagraph}>
-                            {formatDate(props.item.startDate)} - {formatDate(props.item.endDate)}
+                    <br />
+                    <Typography color="textSecondary" variant="subtitle1" sx={{
+                        paddingLeft: theme.spacing(1),
+                        paddingRight: theme.spacing(2)
+                    }}>
+                        Outline
+                    </Typography>
+                    <Typography variant="subtitle1" sx={{
+                        paddingLeft: theme.spacing(2),
+                        paddingRight: theme.spacing(2),
+                        whiteSpace: 'pre-line'
+                    }}>
+                        {props.item.outline}
+                    </Typography>
+                    <Box hidden={props.item.company !== props.infoOverview.expandedWorkExperience}>
+                        <br />
+                        <Typography color="textSecondary" variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(1),
+                            paddingRight: theme.spacing(2)
+                        }}>
+                            Key responsibilities
                         </Typography>
-                    </Grid>
-                </Grid>
-                <br />
-                <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
-                    Outline
-                </Typography>
-                <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
-                    {props.item.outline}
-                </Typography>
-                <Box hidden={props.item.company !== props.infoOverview.expandedWorkExperience}>
-                    <br />
-                    <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
-                        Key responsibilities
-                    </Typography>
-                    <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
-                        {props.item.responsibilities}
-                    </Typography>
-                    <br />
-                    <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
-                        Key Achievements/Projects
-                    </Typography>
-                    <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
-                        {props.item.projects}
-                    </Typography>
-                    <br />
-                    <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
-                        Technologies
-                    </Typography>
-                    <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
-                        {showTechnologies(props.item.skills)}
-                    </Typography>
-                    {projectManagement}
-                    <br />
-                    <Typography color="textSecondary" variant="subtitle1" className={classes.typeographyStyleTitle}>
-                        Team Size
-                    </Typography>
-                    <Typography variant="subtitle1" className={classes.typeographyStyleParagraph}>
-                        {showTeamSize(props.item.teamSize)}
-                    </Typography>
-                </Box>
-            </CardContent>
-        </Card>
+                        <Typography variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(2),
+                            paddingRight: theme.spacing(2),
+                            whiteSpace: 'pre-line'
+                        }}>
+                            {props.item.responsibilities}
+                        </Typography>
+                        <br />
+                        <Typography color="textSecondary" variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(1),
+                            paddingRight: theme.spacing(2)
+                        }}>
+                            Key Achievements/Projects
+                        </Typography>
+                        <Typography variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(2),
+                            paddingRight: theme.spacing(2),
+                            whiteSpace: 'pre-line'
+                        }}>
+                            {props.item.projects}
+                        </Typography>
+                        <br />
+                        <Typography color="textSecondary" variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(1),
+                            paddingRight: theme.spacing(2)
+                        }}>
+                            Technologies
+                        </Typography>
+                        <Typography variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(2),
+                            paddingRight: theme.spacing(2),
+                            whiteSpace: 'pre-line'
+                        }}>
+                            {showTechnologies(props.item.skills)}
+                        </Typography>
+                        {projectManagement}
+                        <br />
+                        <Typography color="textSecondary" variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(1),
+                            paddingRight: theme.spacing(2)
+                        }}>
+                            Team Size
+                        </Typography>
+                        <Typography variant="subtitle1" sx={{
+                            paddingLeft: theme.spacing(2),
+                            paddingRight: theme.spacing(2),
+                            whiteSpace: 'pre-line'
+                        }}>
+                            {showTeamSize(props.item.teamSize)}
+                        </Typography>
+                    </Box>
+                </CardContent>
+            </Card>
+        </ThemeProvider>
     )
 }
 

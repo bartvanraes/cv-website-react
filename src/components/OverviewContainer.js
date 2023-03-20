@@ -1,76 +1,81 @@
 import React from 'react'
-import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import Box from '@material-ui/core/Box'
+import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
+import Box from '@mui/material/Box'
 import TabPanel from './TabPanel'
-import Paper from '@material-ui/core/Paper'
+import Paper from '@mui/material/Paper'
 import SkillOverview from './skills/SkillOverviewComponent'
 import InfoOverview from './info/InfoOverviewComponent'
 import FAQOverview from './faq/FAQOverviewComponent'
 import WorkExperienceOverview from './workExperiences/WorkExperienceOverviewComponent'
-import { Typography, makeStyles } from '@material-ui/core'
-import clsx from 'clsx'
+import { Typography } from '@mui/material'
+import { ThemeProvider } from '@mui/material/styles'
 
-const useStyles = makeStyles(theme => ({
-    headerStyle: {
-        paddingBottom: theme.spacing(2),
-        paddingTop: theme.spacing(1)
-    },
-    headerNameStyle: {
-        paddingTop: theme.spacing(2)
-    },
-    backgroundStyle: {
-        background: theme.palette.background.default
-    }
-}))
-
+import theme from '@/themes/cvTheme'
 
 
 function OverviewContainer(props) {
-    const classes = useStyles()
-    const nameStyle = clsx(
-        classes.headerStyle,
-        classes.headerNameStyle
-    )
     return (
-        <Box className={classes.backgroundStyle}>
-            <Paper position="static">
-                <Paper evelvation={0}>
-                    <Typography variant="h3" align='center' color="textSecondary" className={nameStyle}>
-                        BART VANRAES
-                    </Typography>
-                    <Typography variant="h5" align='center' color="textPrimary" className={classes.headerStyle}>
-                        Full-stack Developer
-                    </Typography>
+        <ThemeProvider theme={theme}>
+            <Box sx={{
+                background: theme.palette.background.default
+            }}>
+                <Paper position="static">
+                    <Paper evelvation={0}>
+                        <Typography variant="h3" align='center' color="textSecondary" sx={{
+                            paddingBottom: theme.spacing(2),
+                            paddingTop: theme.spacing(1)
+                        }}>
+                            BART VANRAES
+                        </Typography>
+                        <Typography variant="h5" align='center' color="textPrimary" sx={{
+                            paddingBottom: theme.spacing(2),
+                            paddingTop: theme.spacing(1)
+                        }}>
+                            Full-stack Developer
+                        </Typography>
+                    </Paper>
+                    <Tabs value={props.tab.selectedTab} onChange={props.tabsHandleChange}>
+                        <Tab label="Overview" sx={{
+                            paddingLeft: theme.spacing(4),
+                            paddingRight: theme.spacing(4),
+                            color: theme.palette.primary.main
+                        }}></Tab>
+                        <Tab label="Experience" sx={{
+                            paddingLeft: theme.spacing(4),
+                            paddingRight: theme.spacing(4),
+                            color: theme.palette.primary.main
+                        }}></Tab>
+                        <Tab label="Skills" sx={{
+                            paddingLeft: theme.spacing(4),
+                            paddingRight: theme.spacing(4),
+                            color: theme.palette.primary.main
+                        }}></Tab>
+                    </Tabs>
                 </Paper>
-                <Tabs value={props.tab.selectedTab} onChange={props.tabsHandleChange} aria-label="simple tabs example">
-                    <Tab label="Overview"></Tab>
-                    <Tab label="Experience"></Tab>
-                    <Tab label="Skills"></Tab>
-                </Tabs>
-            </Paper>
-            <Container>
-                <Grid container spacing={3}>
-                    <Grid item xs={12}>
-                        <TabPanel value={props.tab.selectedTab} index={0}>
-                            <InfoOverview></InfoOverview>
-                        </TabPanel>
-                        <TabPanel value={props.tab.selectedTab} index={1}>
-                            <WorkExperienceOverview></WorkExperienceOverview>
-                        </TabPanel>
-                        <TabPanel value={props.tab.selectedTab} index={2}>
-                            <SkillOverview></SkillOverview>
-                        </TabPanel>
-                        <TabPanel value={props.tab.selectedTab} index={3}>
-                            <FAQOverview></FAQOverview>
-                        </TabPanel>
-                                
+                <Container>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12}>
+                            <TabPanel value={props.tab.selectedTab} index={0}>
+                                <InfoOverview></InfoOverview>
+                            </TabPanel>
+                            <TabPanel value={props.tab.selectedTab} index={1}>
+                                <WorkExperienceOverview></WorkExperienceOverview>
+                            </TabPanel>
+                            <TabPanel value={props.tab.selectedTab} index={2}>
+                                <SkillOverview></SkillOverview>
+                            </TabPanel>
+                            <TabPanel value={props.tab.selectedTab} index={3}>
+                                <FAQOverview></FAQOverview>
+                            </TabPanel>
+                                    
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Container>
-        </Box>
+                </Container>
+            </Box>
+        </ThemeProvider>
     )
 }
 

@@ -1,6 +1,6 @@
-import CategoryType from 'enums/CategoryType'
-import ExperienceType from 'enums/ExperienceType'
-import SkillDispatchType from 'enums/SkillDispatchType'
+import CategoryType from '@/enums/CategoryType'
+import ExperienceType from '@/enums/ExperienceType'
+import SkillDispatchType from '@/enums/SkillDispatchType'
 
 export const skillReducer = (state, action) => {
     switch (action.type) {

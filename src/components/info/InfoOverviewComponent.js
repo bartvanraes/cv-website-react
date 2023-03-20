@@ -1,8 +1,8 @@
 import {useContext, useEffect} from 'react'
 import InfoOverviewContainer from './InfoOverviewContainer'
-import {InfoOverviewContext} from 'context/InfoOverviewContext'
-import InfoOverviewDispatchType from 'enums/InfoOverviewDispatchType'
-import './InfoOverviewComponent.css'
+import {InfoOverviewContext} from '@/context/InfoOverviewContext'
+import InfoOverviewDispatchType from '@/enums/InfoOverviewDispatchType'
+//import './InfoOverviewComponent.css'
 
 const InfoOverview = () => {
     const {infoOverview, dispatch} = useContext(InfoOverviewContext)

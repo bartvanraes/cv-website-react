@@ -1,5 +1,5 @@
-import CategoryType from 'enums/CategoryType'
-import SkillInterestType from 'enums/SkillInterestType'
+import CategoryType from '@/enums/CategoryType'
+import SkillInterestType from '@/enums/SkillInterestType'
 
 const skillData = [
     //Professional Experience

@@ -1,8 +1,8 @@
 import {useContext, useEffect} from 'react'
 import SkillOverviewContainer from './SkillOverviewContainer'
-import { SkillContext } from 'context/SkillContext'
-import SkillDispatchType from 'enums/SkillDispatchType'
-import './SkillOverviewComponent.css'
+import { SkillContext } from '@/context/SkillContext'
+import SkillDispatchType from '@/enums/SkillDispatchType'
+//import './SkillOverviewComponent.css'
 
 const SkillOverview = () => {
     const {skills, dispatch} = useContext(SkillContext)

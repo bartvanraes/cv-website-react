@@ -1,8 +1,8 @@
 import WorkExperienceOverviewContainer from './WorkExperienceOverviewContainer'
 import {useContext, useEffect} from 'react'
-import WorkExperienceDispatchType from 'enums/WorkExperienceDispatchType'
-import {WorkExperienceContext} from 'context/WorkExperienceContext'
-import './WorkExperienceOverviewComponent.css'
+import WorkExperienceDispatchType from '@/enums/WorkExperienceDispatchType'
+import {WorkExperienceContext} from '@/context/WorkExperienceContext'
+//import './WorkExperienceOverviewComponent.css'
 
 const WorkExperienceOverview = () => {
     const {workExperiences, dispatch} = useContext(WorkExperienceContext)
@@ -11,15 +11,25 @@ const WorkExperienceOverview = () => {
         dispatch({ type: WorkExperienceDispatchType.FILTER,  
             filter: {
                 temporaryOnly: false,
-                consultancyOnly: false
+                consultancyOnly: false,
+                quitOnly: false
             }
         })
     }, [dispatch])
 
     const changeFilter = (event, value) => {
+
         const name = event.currentTarget.name
         let val = !!event.currentTarget.value ? event.currentTarget.value : value 
         val = val === undefined ? '': val
+        // The new material Switch controls use 'on' instead of true and don't change value automatically when you click them again
+        val = val === 'on' ? true : val
+        val = val === 'off' ? false : val
+
+        if(event.currentTarget.type === 'checkbox' && val === workExperiences.filter[name]) {
+            val = !val
+        }
+
         dispatch({
             type: WorkExperienceDispatchType.FILTER,  
             filter: {

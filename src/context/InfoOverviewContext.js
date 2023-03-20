@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react'
-import workExperienceData from 'data/workExperienceData'
-import skillData from 'data/skillData'
+import workExperienceData from '@/data/workExperienceData'
+import skillData from '@/data/skillData'
 import {infoOverviewReducer} from './reducers/infoOverviewReducer'
 
 const InfoOverviewContext = createContext()
