@@ -2,7 +2,6 @@ import {useContext} from 'react'
 import RelevantWorkExperienceItemContainer from './RelevantWorkExperienceItemContainer'
 import InfoOverviewDispatchType from '@/enums/InfoOverviewDispatchType'
 import {InfoOverviewContext} from '@/context/InfoOverviewContext'
-//import './RelevantWorkExperienceItemComponent.css'
 
 const RelevantWorkExperienceItem = (props) => {
     const {infoOverview, dispatch} = useContext(InfoOverviewContext)

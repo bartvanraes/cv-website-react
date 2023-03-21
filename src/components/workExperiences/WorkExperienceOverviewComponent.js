@@ -2,7 +2,6 @@ import WorkExperienceOverviewContainer from './WorkExperienceOverviewContainer'
 import {useContext, useEffect} from 'react'
 import WorkExperienceDispatchType from '@/enums/WorkExperienceDispatchType'
 import {WorkExperienceContext} from '@/context/WorkExperienceContext'
-//import './WorkExperienceOverviewComponent.css'
 
 const WorkExperienceOverview = () => {
     const {workExperiences, dispatch} = useContext(WorkExperienceContext)

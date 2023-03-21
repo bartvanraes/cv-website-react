@@ -5,7 +5,6 @@ import { TabContext } from '@/context/TabContext'
 import OverviewContainer from './OverviewContainer'
 import CategoryType from '@/enums/CategoryType'
 import SkillDispatchType from '@/enums/SkillDispatchType'
-//import styles from './OverviewComponent.css'
 
 const Overview = () => {
     

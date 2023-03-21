@@ -27,10 +27,6 @@ const SkillProvider = ({ children }) => {
         
     )
 
-    /*const saveSkill = skill => {
-        // not used
-    }*/
-
     return (
         <SkillContext.Provider value={{skills, dispatch}}>
             {children}
