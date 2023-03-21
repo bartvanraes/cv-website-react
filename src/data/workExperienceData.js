@@ -11,7 +11,7 @@ const workExerperienceData = [
         temporary: false,
         consultancy: false,
         quit: false,
-        outline: 'Following a career guidance program of the VDAB TEST',
+        outline: 'Following a career guidance program of the VDAB',
         responsibilities: ``,
         projects: ``,
         projectManagement: ProjectManagementType.NONE,
