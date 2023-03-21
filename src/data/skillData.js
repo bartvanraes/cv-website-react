@@ -881,7 +881,7 @@ const skillData = [
         months: 0,
         professional: false,
         legacy: false,
-        handson: false,
+        handson: true,
         category: CategoryType.PROGRAMMING_SKILL,
         interestLevel: SkillInterestType.INTERESTED
     },
