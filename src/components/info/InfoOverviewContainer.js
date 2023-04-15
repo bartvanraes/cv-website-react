@@ -266,7 +266,7 @@ function InfoOverviewContainer(props) {
                                         paddingRight: theme.spacing(2)
                                     }}></EventAvailableIcon>
                                         <Typography color="textPrimary" variant="body1">
-                                            In a VDAB career guidance program<br /> Not available for projects
+                                            In a VDAB career guidance program<br /> Available for projects or internships
                                     </Typography>
                                 </Grid>               
                             </Grid>
