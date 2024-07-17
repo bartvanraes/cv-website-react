@@ -3,11 +3,28 @@ import TeamSizeType from '@/enums/TeamSizeType'
 
 const workExerperienceData = [
     {
+        company: '4D Vision',
+        location: 'Antwerp',
+        position: 'Angular/.NET Core Developer',
+        startDate: '08/04/2024',
+        endDate: null,
+        temporary: false,
+        consultancy: false,
+        quit: false,
+        outline: 'Full stack development in Angular and .NET Core for generated web applications.',
+        responsibilities: `• Development of an in-house web application generator in Angular and .NET        
+        • Maintaining legacy applications`,
+        projects: `• Madesharp 2`,
+        projectManagement: ProjectManagementType.NONE,
+        teamSize: TeamSizeType.SMALL,
+        skills: ['.NET', 'Angular', '.NET Core', 'Entity Framework', 'SQL Server', 'Devops', 'Azure', 'TypeScript', 'Ngrx']
+    },
+    {
         company: 'VDAB',
         location: 'Antwerp',
         position: 'Career guidance program',
         startDate: '06/12/2022',
-        endDate: null,
+        endDate: '7/04/2024',
         temporary: false,
         consultancy: false,
         quit: false,
