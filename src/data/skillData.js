@@ -6,7 +6,7 @@ const skillData = [
     //Programming language
     {
         name: '.NET (C#)',
-        months: 126,
+        months: 139,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -30,7 +30,7 @@ const skillData = [
     },
     {
         name: 'Angular',
-        months: 30,
+        months: 41,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -38,7 +38,7 @@ const skillData = [
     },
     {
         name: 'Ngrx',
-        months: 30,
+        months: 31,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -62,7 +62,7 @@ const skillData = [
     },
     {
         name: 'jQuery',
-        months: 36,
+        months: 39,
         professional: true,
         legacy: true,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -70,7 +70,7 @@ const skillData = [
     },
     {
         name: 'Rest API',
-        months: 58,
+        months: 71,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -86,7 +86,7 @@ const skillData = [
     },
     {
         name: 'JSON',
-        months: 48,
+        months: 61,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -94,7 +94,7 @@ const skillData = [
     },
     {
         name: '.NET Core',
-        months: 14,
+        months: 27,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -166,7 +166,7 @@ const skillData = [
     },
     {
         name: 'Entity Framework',
-        months: 46,
+        months: 59,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -198,7 +198,7 @@ const skillData = [
     },
     {
         name: 'Webservices',
-        months: 82,
+        months: 95,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -206,7 +206,7 @@ const skillData = [
     },
     {
         name: 'CSS',
-        months: 96,
+        months: 109,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -214,7 +214,7 @@ const skillData = [
     },
     {
         name: 'HTML',
-        months: 96,
+        months: 109,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -238,7 +238,7 @@ const skillData = [
     },
     {
         name: 'LINQ',
-        months: 64,
+        months: 77,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -278,7 +278,7 @@ const skillData = [
     },
     {
         name: 'Typescript',
-        months: 30,
+        months: 43,
         professional: true,
         legacy: false,
         category: CategoryType.PROGRAMMING_SKILL,
@@ -316,6 +316,15 @@ const skillData = [
         handson: true,
         category: CategoryType.SOFTWARE,
         interestLevel: SkillInterestType.INTERESTED
+    },
+    {
+        name: 'Copilot',
+        months: 4,
+        professional: true,
+        legacy: false,
+        handson: true,
+        category: CategoryType.SOFTWARE,
+        interestLevel: SkillInterestType.HIGHLY_INTERESTED
     },
     {
         name: 'Xamarin',
@@ -371,7 +380,7 @@ const skillData = [
     },
     {
         name: 'OO Development',
-        months: 126,
+        months: 139,
         professional: true,
         legacy: false,
         category: CategoryType.METHODOLOGY,
@@ -411,7 +420,7 @@ const skillData = [
     },
     {
         name: 'Devops',
-        months: 12,
+        months: 25,
         professional: true,
         legacy: false,
         category: CategoryType.METHODOLOGY,
@@ -428,7 +437,7 @@ const skillData = [
     //Software
     {
         name: 'Visual Studio .NET',
-        months: 118,
+        months: 131,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE,
@@ -436,7 +445,7 @@ const skillData = [
     },
     {
         name: 'Visual Studio Code',
-        months: 30,
+        months: 43,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE,
@@ -452,7 +461,7 @@ const skillData = [
     },
     {
         name: 'Microsoft Office',
-        months: 76,
+        months: 89,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE,
@@ -492,7 +501,7 @@ const skillData = [
     },
     {
         name: 'SQL Server',
-        months: 85,
+        months: 98,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE,
@@ -532,7 +541,7 @@ const skillData = [
     },
     {
         name: 'Git',
-        months: 40,
+        months: 53,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE,
@@ -564,7 +573,7 @@ const skillData = [
     },
     {
         name: 'Windows',
-        months: 148,
+        months: 161,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE,
@@ -580,7 +589,7 @@ const skillData = [
     },
     {
         name: 'Telerik Controls',
-        months: 18,
+        months: 31,
         professional: true,
         legacy: false,
         category: CategoryType.SOFTWARE,

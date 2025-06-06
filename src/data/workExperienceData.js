@@ -7,17 +7,17 @@ const workExerperienceData = [
         location: 'Antwerp',
         position: 'Angular/.NET Core Developer',
         startDate: '08/04/2024',
-        endDate: null,
+        endDate: '18/07/2025',
         temporary: false,
         consultancy: false,
         quit: false,
         outline: 'Full stack development in Angular and .NET Core for generated web applications.',
         responsibilities: `• Development of an in-house web application generator in Angular and .NET        
         • Maintaining legacy applications`,
-        projects: `• Madesharp 2`,
+        projects: `• Madesharp 2.0`,
         projectManagement: ProjectManagementType.NONE,
         teamSize: TeamSizeType.SMALL,
-        skills: ['.NET', 'Angular', '.NET Core', 'Entity Framework', 'SQL Server', 'Devops', 'Azure', 'TypeScript', 'Ngrx']
+        skills: ['.NET', 'Angular', '.NET Core', 'Entity Framework', 'SQL Server', 'Devops', 'Azure', 'TypeScript', 'Copilot']
     },
     {
         company: 'VDAB',

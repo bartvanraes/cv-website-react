@@ -110,7 +110,7 @@ function InfoOverviewContainer(props) {
                                     PROFILE
                                 </Typography>
                                 <Typography color="textPrimary" variant="body1">
-                                    Over 13 years of experience as a
+                                    Over 14 years of experience as a
                                     software engineer/analyst, both in
                                     consultancy and in-house
                                     development.
@@ -266,7 +266,7 @@ function InfoOverviewContainer(props) {
                                         paddingRight: theme.spacing(2)
                                     }}></EventAvailableIcon>
                                         <Typography color="textPrimary" variant="body1">
-                                            In a VDAB career guidance program<br /> Available for projects or internships
+                                            Available for projects
                                     </Typography>
                                 </Grid>               
                             </Grid>
